@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AxeCore.HTMLReporter", "src\html-reporter\AxeCore.HTMLReporter.csproj", "{1A1AF7F1-B397-44D0-8698-C05B5F5186F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{50AB32D1-D376-4887-9EEB-7BE2328046DA}"
+	ProjectSection(SolutionItems) = preProject
+		CODE_OF_CONDUCT.md = CODE_OF_CONDUCT.md
+		LICENSE = LICENSE
+		README.md = README.md
+		SECURITY.md = SECURITY.md
+		SUPPORT.md = SUPPORT.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A1AF7F1-B397-44D0-8698-C05B5F5186F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A1AF7F1-B397-44D0-8698-C05B5F5186F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A1AF7F1-B397-44D0-8698-C05B5F5186F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A1AF7F1-B397-44D0-8698-C05B5F5186F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9715386D-299E-43AA-97A2-DFE3B6B8450E}
+	EndGlobalSection
+EndGlobal
