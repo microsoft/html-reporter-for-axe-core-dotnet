@@ -1,8 +1,14 @@
-# html-reporter-for-axe-core-dotnet
+# Project
 
-Dotnet library for converting [axe-core](https://github.com/dequelabs/axe-core) run results to a HTML report. Built on top of the work done in [axe-core-nuget](https://github.com/dequelabs/axe-core-nuget).
+> This repo has been populated by an initial template to help get you started. Please
+> make sure to update the content to build a great experience for community-building.
 
-Provides integration libraries for [Deque.AxeCore.Playwright](https://github.com/dequelabs/axe-core-nuget/tree/develop/packages/playwright) and [Deque.AxeCore.Selenium](https://github.com/dequelabs/axe-core-nuget/tree/develop/packages/selenium) 
+As the maintainer of this project, please make a few updates:
+
+- Improving this README.MD file to provide a great experience
+- Updating SUPPORT.MD with content about this project's support experience
+- Understanding the security reporting process in SECURITY.MD
+- Remove this section from the README
 
 ## Contributing
 
