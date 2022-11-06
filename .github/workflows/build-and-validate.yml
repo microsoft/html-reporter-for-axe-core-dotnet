@@ -17,6 +17,9 @@ jobs:
       - name: Install dependencies
         run: dotnet restore
 
+      - name: Check formatting
+        run: dotnet format --verify-no-changes
+
       - name: Build
         run: dotnet build --configuration Release --no-restore
 
