@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 		SUPPORT.md = SUPPORT.md
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AxeCore.HTMLReporter.Tests", "tests\html-reporter\AxeCore.HTMLReporter.Tests.csproj", "{6A5EB42E-630F-4132-8679-11728C7A092F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 		{1A1AF7F1-B397-44D0-8698-C05B5F5186F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A1AF7F1-B397-44D0-8698-C05B5F5186F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A1AF7F1-B397-44D0-8698-C05B5F5186F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A5EB42E-630F-4132-8679-11728C7A092F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A5EB42E-630F-4132-8679-11728C7A092F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A5EB42E-630F-4132-8679-11728C7A092F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A5EB42E-630F-4132-8679-11728C7A092F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
