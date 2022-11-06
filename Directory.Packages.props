@@ -1,0 +1,12 @@
+<Project>
+  <PropertyGroup>
+    <!-- Enable central package management -->
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.3.0" />
+	<PackageVersion Include="Moq" Version="4.18.2" />
+	<PackageVersion Include="NUnit" Version="3.13.3" />
+	<PackageVersion Include="NUnit3TestAdapter" Version="4.2.1" />
+  </ItemGroup>
+</Project>
