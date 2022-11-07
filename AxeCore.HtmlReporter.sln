@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AxeCore.HTMLReporter.Tests", "tests\html-reporter\AxeCore.HTMLReporter.Tests.csproj", "{6A5EB42E-630F-4132-8679-11728C7A092F}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AxeCore.HTMLReporter.DevServer", "src\dev-server\AxeCore.HTMLReporter.DevServer.csproj", "{CC2522E5-8DA8-4017-BF55-A520F1E2C1A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{6A5EB42E-630F-4132-8679-11728C7A092F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A5EB42E-630F-4132-8679-11728C7A092F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A5EB42E-630F-4132-8679-11728C7A092F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC2522E5-8DA8-4017-BF55-A520F1E2C1A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC2522E5-8DA8-4017-BF55-A520F1E2C1A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC2522E5-8DA8-4017-BF55-A520F1E2C1A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC2522E5-8DA8-4017-BF55-A520F1E2C1A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
