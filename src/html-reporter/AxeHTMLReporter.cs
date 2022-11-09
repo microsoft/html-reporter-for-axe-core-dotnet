@@ -38,7 +38,8 @@ namespace AxeCore.HTMLReporter
         {
             string reportTemplateContent = GetContent("Content/Report.cshtml");
 
-            IRazorEngineCompiledTemplate template = m_razorEngine.Compile(reportTemplateContent, builder => {
+            IRazorEngineCompiledTemplate template = m_razorEngine.Compile(reportTemplateContent, builder =>
+            {
                 builder.AddAssemblyReference(typeof(DateTime));
             });
             string htmlReport = template.Run();
