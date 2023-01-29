@@ -10,4 +10,8 @@
     <PackageReference Include="NUnit" />
     <PackageReference Include="NUnit3TestAdapter" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\html-reporter\AxeCore.HTMLReporter.csproj" />
+  </ItemGroup>
 </Project>

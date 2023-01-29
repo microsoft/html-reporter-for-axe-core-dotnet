@@ -16,6 +16,7 @@
     <PackageReference Include="Microsoft.Extensions.FileProviders.Abstractions" />
     <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" />
 	<PackageReference Include="RazorEngineCore" />
+	<PackageReference Include="Deque.AxeCore.Commons" />
   </ItemGroup>
 
   <ItemGroup>
