@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
+using Deque.AxeCore.Commons;
 using Microsoft.Extensions.FileProviders;
 using RazorEngineCore;
 using System;
@@ -34,7 +35,7 @@ namespace AxeCore.HTMLReporter
         }
 
         /// <inheritdoc />
-        public AxeHTMLReport CreateReport(object results, AxeHTMLReportOptions options = null)
+        public AxeHTMLReport CreateReport(AxeResult results, AxeHTMLReportOptions options = null)
         {
             string reportTemplateContent = GetContent("Content/Report.cshtml");
 
