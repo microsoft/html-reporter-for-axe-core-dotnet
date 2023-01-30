@@ -1,10 +1,12 @@
 ﻿// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
+using AxeCore.HTMLReporter.Models;
 using Deque.AxeCore.Commons;
 using Microsoft.Extensions.FileProviders;
 using RazorEngineCore;
 using System;
+using System.Globalization;
 using System.IO;
 
 namespace AxeCore.HTMLReporter
@@ -41,9 +43,16 @@ namespace AxeCore.HTMLReporter
 
             IRazorEngineCompiledTemplate template = m_razorEngine.Compile(reportTemplateContent, builder =>
             {
+                builder.AddAssemblyReference(typeof(ReportViewModel));
+                builder.AddAssemblyReference(typeof(CultureInfo));
                 builder.AddAssemblyReference(typeof(DateTime));
+                builder.AddAssemblyReference(typeof(AxeResult));
             });
-            string htmlReport = template.Run();
+
+            CultureInfo language = CultureInfo.CurrentCulture;
+
+            ReportViewModel viewModel = new ReportViewModel(language, results);
+            string htmlReport = template.Run(viewModel);
 
             return new AxeHTMLReport(htmlReport);
         }
