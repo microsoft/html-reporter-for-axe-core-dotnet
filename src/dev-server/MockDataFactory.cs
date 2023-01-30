@@ -43,6 +43,7 @@ namespace AxeCore.HTMLReporter.DevServer
 
             JObject resultJson = JObject.FromObject(new
             {
+                url = "https://127.0.0.1",
                 violations,
                 passes,
                 inapplicable,

@@ -4,5 +4,29 @@
 }
 
 @using System;
+@using AxeCore.HTMLReporter.Content;
 
-<a>Hello World. It's @DateTime.Now.ToShortDateString()</a>
+@{
+    var viewModel = Model as AxeCore.HTMLReporter.Models.ReportViewModel;
+    var languageDir = viewModel.Language.TextInfo.IsRightToLeft ? "rtl" : "ltr";
+
+    var results = viewModel.Results;
+}
+
+<html lang="@viewModel.Language.TwoLetterISOLanguageName" dir="@languageDir">
+    <head>
+        <title>@Strings.Title</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <style>
+            h1 {
+                color: blue
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Hello world</h1>
+        <a>@results.Url</a>
+    </body>
+</html>
