@@ -1,17 +1,15 @@
-﻿// Copyright (c) Microsoft Corporation.
-// Licensed under the MIT License.
-
-using Deque.AxeCore.Commons;
+﻿using Deque.AxeCore.Commons;
 using Newtonsoft.Json.Linq;
+using System;
 
-namespace AxeCore.HTMLReporter.DevServer
+namespace AxeCore.HTMLReporter.Tests
 {
-    public sealed class MockDataFactory
+    internal static class TestData
     {
-        public static AxeResult CreateMockResultData()
+        internal static AxeResult CreateDefaultResult()
         {
             AxeResultItem[] violations = new AxeResultItem[]
-            {
+           {
                 new AxeResultItem()
                 {
                     Id = "html-has-lang",
@@ -31,7 +29,7 @@ namespace AxeCore.HTMLReporter.DevServer
                     Tags = new string[] { "cat.forms", "wcag2a", "wcag412", "section508", "section508.22.n", "ACT" },
                     Impact = "Serious"
                 }
-            };
+           };
 
             AxeResultItem[] passes = new AxeResultItem[]
             {
@@ -92,7 +90,7 @@ namespace AxeCore.HTMLReporter.DevServer
                 incomplete
             });
 
-            AxeResult mockResult = new(resultJson);
+            AxeResult mockResult = new AxeResult(resultJson);
 
             return mockResult;
         }

@@ -1,7 +1,8 @@
 ﻿// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-using Deque.AxeCore.Commons;
+using System;
+using System.Collections.Generic;
 using System.Globalization;
 
 namespace AxeCore.HTMLReporter.Models
@@ -17,17 +18,29 @@ namespace AxeCore.HTMLReporter.Models
         public CultureInfo Language { get; }
 
         /// <summary>
+        /// Test URI
+        /// </summary>
+        public Uri TestUri { get; }
+
+        /// <summary>
+        /// Formatted Timestamp
+        /// </summary>
+        public string FormattedTimestamp { get; }
+
+        /// <summary>
         /// Axe Results
         /// </summary>
-        public AxeResult Results { get; }
+        public IDictionary<string, IList<RuleInfoModel>> RuleResultGroups { get; }
 
         /// <summary>
         /// Constructor
         /// </summary>
-        internal ReportViewModel(CultureInfo language, AxeResult results)
+        internal ReportViewModel(CultureInfo language, Uri testUri, string formattedTimestamp, IDictionary<string, IList<RuleInfoModel>> ruleResultGroups)
         {
             Language = language;
-            Results = results;
+            TestUri = testUri;
+            FormattedTimestamp = formattedTimestamp;
+            RuleResultGroups = ruleResultGroups;
         }
     }
 }

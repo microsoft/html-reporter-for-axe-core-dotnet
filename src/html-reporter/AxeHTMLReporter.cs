@@ -6,8 +6,11 @@ using Deque.AxeCore.Commons;
 using Microsoft.Extensions.FileProviders;
 using RazorEngineCore;
 using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
+using System.Linq;
+using System.Net;
 
 namespace AxeCore.HTMLReporter
 {
@@ -47,11 +50,20 @@ namespace AxeCore.HTMLReporter
                 builder.AddAssemblyReference(typeof(CultureInfo));
                 builder.AddAssemblyReference(typeof(DateTime));
                 builder.AddAssemblyReference(typeof(AxeResult));
+                builder.AddAssemblyReference(typeof(Uri));
             });
 
             CultureInfo language = CultureInfo.CurrentCulture;
 
-            ReportViewModel viewModel = new ReportViewModel(language, results);
+            Uri testUri = results.Url != null ? new Uri(results.Url) : null;
+
+            string formattedTimestamp = results.Timestamp.HasValue
+                ? results.Timestamp.Value.DateTime.ToString("U", language.DateTimeFormat)
+                : null;
+
+            IDictionary<string, IList<RuleInfoModel>> ruleResultGroups = MapperHelper.MapAxeResultsToResultsGroup(results);
+
+            ReportViewModel viewModel = new ReportViewModel(language, testUri, formattedTimestamp, ruleResultGroups);
             string htmlReport = template.Run(viewModel);
 
             return new AxeHTMLReport(htmlReport);

@@ -1,32 +1,111 @@
 @{
     // Copyright (c) Microsoft Corporation.
-    // Licensed under the MIT License.
+            // Licensed under the MIT License.
 }
 
 @using System;
+@using AxeCore.HTMLReporter;
 @using AxeCore.HTMLReporter.Content;
 
 @{
     var viewModel = Model as AxeCore.HTMLReporter.Models.ReportViewModel;
     var languageDir = viewModel.Language.TextInfo.IsRightToLeft ? "rtl" : "ltr";
 
-    var results = viewModel.Results;
+    var resultGroups = viewModel.RuleResultGroups;
+    var testUrl = viewModel.TestUri;
+    var timestamp = viewModel.FormattedTimestamp;
+    var violationCount = resultGroups[ReportContants.ViolationsKey].Count;
+    var passCount = resultGroups[ReportContants.PassesKey].Count;
+    var incompleteCount = resultGroups[ReportContants.IncompleteKey].Count;
+    var inapplicableCount = resultGroups[ReportContants.Inapplicable].Count;
 }
 
+<!DOCTYPE html>
 <html lang="@viewModel.Language.TwoLetterISOLanguageName" dir="@languageDir">
-    <head>
-        <title>@Strings.Title</title>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<head>
+    <title>@Strings.Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <style>
-            h1 {
-                color: blue
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Hello world</h1>
-        <a>@results.Url</a>
-    </body>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>@Strings.Title</h1>
+    <br />
+    <table>
+        <tr>
+            <td>@Strings.TestUrlRowName</td>
+            <td>@testUrl</td>
+        </tr>
+        <tr>
+            <td>@Strings.TimestampRowName</td>
+            <td>@timestamp</td>
+        </tr>
+        <tr>
+            <td>@Strings.ViolationsRowName</td>
+            <td><a href="#@ReportContants.ViolationsKey">@violationCount</a></td>
+        </tr>
+        <tr>
+            <td>@Strings.PassesRowName</td>
+            <td><a href="#@ReportContants.PassesKey">@passCount</a></td>
+        </tr>
+        <tr>
+            <td>@Strings.IncompleteRowName</td>
+            <td><a href="#@ReportContants.IncompleteKey">@incompleteCount</a></td>
+        </tr>
+        <tr>
+            <td>@Strings.InapplicableRowName</td>
+            <td><a href="#@ReportContants.Inapplicable">@inapplicableCount</a></td>
+        </tr>
+    </table>
+    <br />
+    @{
+        foreach (var ruleGroup in resultGroups)
+        {
+            <section id="@ruleGroup.Key">
+                @{
+                    foreach (var rule in ruleGroup.Value)
+                    {
+                        <hr />
+                        <section id="@rule.Id">
+                            <h2>@string.Format(Strings.RuleHeaderTemplate, @rule.DisplayName, @rule.Description)</h2>
+                            <table>
+                                <tr>
+                                    <td>@Strings.ImpactRowName</td>
+                                    <td>@rule.Impact</td>
+                                </tr>
+                                <tr>
+                                    <td>@Strings.HelpUrlRowName</td>
+                                    <td><a href="@rule.HelpUrl">@rule.HelpUrl</a></td>
+                                </tr>
+                                <tr>
+                                    <td>@Strings.TagsRowName</td>
+                                    <td>@string.Join(", ", rule.Tags)</td>
+                                </tr>
+                            </table>
+                            <br />
+                            @{
+                                foreach (var ruleNode in rule.RuleNodes)
+                                {
+                                    <div>
+                                        <dl>
+                                            <dt>@Strings.HTMLLabel</dt>
+                                            <dd>@ruleNode.Html</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>@Strings.SelectorsLabel</dt>
+                                            <dd>@ruleNode.Selector</dd>
+                                        </dl>
+                                    </div>
+                                }
+                            }
+                        </section>
+                    }
+                }
+            </section>
+        }
+    }
+</body>
 </html>
