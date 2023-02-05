@@ -21,7 +21,8 @@ namespace AxeCore.HTMLReporter.Models
         /// <summary>
         /// Constructor
         /// </summary>
-        public RuleNodeInfoModel(string html, string selector) {
+        public RuleNodeInfoModel(string html, string selector)
+        {
             Html = html;
             Selector = selector;
         }
