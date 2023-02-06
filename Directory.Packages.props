@@ -4,6 +4,7 @@
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
   <ItemGroup>
+	<PackageVersion Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageVersion Include="Microsoft.Extensions.FileProviders.Abstractions" Version="7.0.0" />
     <PackageVersion Include="Microsoft.Extensions.FileProviders.Embedded" Version="7.0.0" />
 	<PackageVersion Include="RazorEngineCore" Version="2022.8.1" />

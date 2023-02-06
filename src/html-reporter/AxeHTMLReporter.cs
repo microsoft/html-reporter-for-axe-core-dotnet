@@ -46,6 +46,7 @@ namespace AxeCore.HTMLReporter
 
             IRazorEngineCompiledTemplate template = m_razorEngine.Compile(reportTemplateContent, builder =>
             {
+                builder.AddAssemblyReference(typeof(Microsoft.CSharp.RuntimeBinder.RuntimeBinderException));
                 builder.AddAssemblyReference(typeof(ReportViewModel));
                 builder.AddAssemblyReference(typeof(CultureInfo));
                 builder.AddAssemblyReference(typeof(DateTime));
