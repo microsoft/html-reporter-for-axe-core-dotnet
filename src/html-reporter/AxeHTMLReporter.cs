@@ -97,7 +97,7 @@ namespace AxeCore.HTMLReporter
                 Rules = itemResults.Select(ruleResult => new RuleModel()
                 {
                     RuleId = ruleResult.Id,
-                    RuleTitle = WebUtility.HtmlEncode(string.Format(Strings.RuleHeaderTemplate, ruleResult.Id.Replace('-', ' '), ruleResult.Help)),
+                    RuleTitle = string.Format(Strings.RuleHeaderTemplate, ruleResult.Id.Replace('-', ' '), ruleResult.Help),
                     ImpactRowName = Strings.ImpactRowName,
                     Impact = ruleResult.Impact,
                     HelpUrlRowName = Strings.HelpUrlRowName,
