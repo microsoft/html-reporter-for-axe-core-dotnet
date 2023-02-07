@@ -26,7 +26,7 @@ app.MapGet("/", async (context) =>
         await page.GotoAsync(testUrl.ToString());
 
         axeResults = await page.RunAxe();
-    } 
+    }
     else
     {
         axeResults = MockDataFactory.CreateMockResultData();
