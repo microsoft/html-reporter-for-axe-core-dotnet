@@ -14,6 +14,7 @@
   </ItemGroup>
 
 	<Target Name="InstallPlaywright" AfterTargets="AfterBuild">
-		<Exec Command="pwsh .\$(OutDir)playwright.ps1 install"></Exec>
+		<Exec Command="pwsh .\$(OutDir)playwright.ps1 install" Condition="$([MSBuild]::IsOSPlatform('Windows'))"></Exec>
+		<Exec Command="pwsh $(OutDir)playwright.ps1 install" Condition="$([MSBuild]::IsOSPlatform('Linux'))"></Exec>
 	</Target>
 </Project>
