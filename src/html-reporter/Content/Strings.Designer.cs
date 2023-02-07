@@ -61,11 +61,119 @@ namespace AxeCore.HTMLReporter.Content {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Help Url.
+        /// </summary>
+        public static string HelpUrlRowName {
+            get {
+                return ResourceManager.GetString("HelpUrlRowName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HTML.
+        /// </summary>
+        public static string HTMLLabel {
+            get {
+                return ResourceManager.GetString("HTMLLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Impact.
+        /// </summary>
+        public static string ImpactRowName {
+            get {
+                return ResourceManager.GetString("ImpactRowName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inapplicable.
+        /// </summary>
+        public static string InapplicableRowName {
+            get {
+                return ResourceManager.GetString("InapplicableRowName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Incomplete.
+        /// </summary>
+        public static string IncompleteRowName {
+            get {
+                return ResourceManager.GetString("IncompleteRowName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Passes.
+        /// </summary>
+        public static string PassesRowName {
+            get {
+                return ResourceManager.GetString("PassesRowName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} - {1}.
+        /// </summary>
+        public static string RuleHeaderTemplate {
+            get {
+                return ResourceManager.GetString("RuleHeaderTemplate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Selector(s).
+        /// </summary>
+        public static string SelectorsLabel {
+            get {
+                return ResourceManager.GetString("SelectorsLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tags.
+        /// </summary>
+        public static string TagsRowName {
+            get {
+                return ResourceManager.GetString("TagsRowName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Test URL.
+        /// </summary>
+        public static string TestUrlRowName {
+            get {
+                return ResourceManager.GetString("TestUrlRowName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Timestamp.
+        /// </summary>
+        public static string TimestampRowName {
+            get {
+                return ResourceManager.GetString("TimestampRowName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Accessibility Report.
         /// </summary>
         public static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Violations.
+        /// </summary>
+        public static string ViolationsRowName {
+            get {
+                return ResourceManager.GetString("ViolationsRowName", resourceCulture);
             }
         }
     }
