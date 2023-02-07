@@ -5,7 +5,15 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\html-reporter\AxeCore.HTMLReporter.csproj" />
+	<PackageReference Include="Microsoft.Playwright" />
+	<PackageReference Include="Deque.AxeCore.Commons" />
+	<PackageReference Include="Deque.AxeCore.Playwright" />
   </ItemGroup>
+
+	<Target Name="InstallPlaywright" AfterTargets="AfterBuild">
+		<Exec Command="powershell .\$(OutDir)playwright.ps1 install"></Exec>
+	</Target>
 </Project>

@@ -107,9 +107,9 @@ namespace AxeCore.HTMLReporter
                     RuleNodes = ruleResult.Nodes?.Select(node => new RuleNodeModel()
                     {
                         HTMLLabel = Strings.HTMLLabel,
-                        HTML = WebUtility.HtmlEncode(node.Html),
+                        HTML = node.Html,
                         SelectorLabel = Strings.SelectorsLabel,
-                        Selector = WebUtility.HtmlEncode(node.Target.ToString()),
+                        Selector = node.Target.ToString(),
                     }).ToArray() ?? Array.Empty<RuleNodeModel>()
                 }).ToArray(),
             };

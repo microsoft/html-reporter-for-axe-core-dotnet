@@ -5,10 +5,12 @@
   </PropertyGroup>
   <ItemGroup>
 	<PackageVersion Include="Handlebars.Net" Version="2.1.2" />
+	<PackageVersion Include="Microsoft.Playwright" Version="1.20.2" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.3.0" />
     <PackageVersion Include="Moq" Version="4.18.2" />
     <PackageVersion Include="NUnit" Version="3.13.3" />
     <PackageVersion Include="NUnit3TestAdapter" Version="4.3.1" />
 	<PackageVersion Include="Deque.AxeCore.Commons" Version="4.4.0-alpha.c9651f2c2284967c64d2f28e460b5181d0af5c6d" />
+    <PackageVersion Include="Deque.AxeCore.Playwright" Version="4.4.0-alpha.c9651f2c2284967c64d2f28e460b5181d0af5c6d" />
   </ItemGroup>
 </Project>
