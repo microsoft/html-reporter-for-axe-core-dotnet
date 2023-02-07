@@ -28,19 +28,19 @@ namespace AxeCore.HTMLReporter.Templates
                     </tr>
                     <tr>
                         <td>{{ViolationsRowName}}</td>
-                        <td><a href=""{{ViolationsKey}}"">{{ViolationsCount}}</a></td>
+                        <td><a href=""#{{ViolationsKey}}"">{{ViolationsCount}}</a></td>
                     </tr>
                     <tr>
                         <td>{{PassesRowName}}</td>
-                        <td><a href=""{{PassesKey}}"">{{PassesCount}}</a></td>
+                        <td><a href=""#{{PassesKey}}"">{{PassesCount}}</a></td>
                     </tr>
                     <tr>
                         <td>{{IncompleteRowName}}</td>
-                        <td><a href=""{{IncompleteKey}}"">{{IncompleteCount}}</a></td>
+                        <td><a href=""#{{IncompleteKey}}"">{{IncompleteCount}}</a></td>
                     </tr>
                     <tr>
                         <td>{{InapplicableRowName}}</td>
-                        <td><a href=""{{InapplicableKey}}"">{{InapplicableCount}}</a></td>
+                        <td><a href=""#{{InapplicableKey}}"">{{InapplicableCount}}</a></td>
                     </tr>
                 </table>
                 <br />
