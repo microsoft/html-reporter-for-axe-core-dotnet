@@ -117,7 +117,43 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="HelpUrlRowName" xml:space="preserve">
+    <value>Help Url</value>
+  </data>
+  <data name="HTMLLabel" xml:space="preserve">
+    <value>HTML</value>
+  </data>
+  <data name="ImpactRowName" xml:space="preserve">
+    <value>Impact</value>
+  </data>
+  <data name="InapplicableRowName" xml:space="preserve">
+    <value>Inapplicable</value>
+  </data>
+  <data name="IncompleteRowName" xml:space="preserve">
+    <value>Incomplete</value>
+  </data>
+  <data name="PassesRowName" xml:space="preserve">
+    <value>Passes</value>
+  </data>
+  <data name="RuleHeaderTemplate" xml:space="preserve">
+    <value>{0} - {1}</value>
+  </data>
+  <data name="SelectorsLabel" xml:space="preserve">
+    <value>Selector(s)</value>
+  </data>
+  <data name="TagsRowName" xml:space="preserve">
+    <value>Tags</value>
+  </data>
+  <data name="TestUrlRowName" xml:space="preserve">
+    <value>Test URL</value>
+  </data>
+  <data name="TimestampRowName" xml:space="preserve">
+    <value>Timestamp</value>
+  </data>
   <data name="Title" xml:space="preserve">
     <value>Accessibility Report</value>
+  </data>
+  <data name="ViolationsRowName" xml:space="preserve">
+    <value>Violations</value>
   </data>
 </root>
