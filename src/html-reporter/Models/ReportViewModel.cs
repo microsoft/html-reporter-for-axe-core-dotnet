@@ -71,7 +71,7 @@ namespace AxeCore.HTMLReporter.Models
         /// <summary>
         /// PassesCount
         /// </summary>
-        public int PassesCount { get; set;}
+        public int PassesCount { get; set; }
 
         /// <summary>
         /// Incomplete Row Name
