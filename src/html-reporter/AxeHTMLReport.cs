@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
+using System.IO;
+
 namespace AxeCore.HTMLReporter
 {
     /// <summary>
@@ -9,6 +11,8 @@ namespace AxeCore.HTMLReporter
     public sealed class AxeHTMLReport
     {
         private readonly string m_htmlContent;
+
+        private const string DefaultFilename = "index.html";
 
         internal AxeHTMLReport(string htmlContent)
         {
@@ -25,7 +29,11 @@ namespace AxeCore.HTMLReporter
         /// <returns>This instance.</returns>
         public AxeHTMLReport WriteToFile(string filename = null)
         {
-            // TODO IsaacWalker - Write to file
+            string reportFilename = filename ?? DefaultFilename;
+
+            Directory.CreateDirectory(Path.GetDirectoryName(reportFilename));
+            File.WriteAllText(reportFilename, m_htmlContent);
+
             return this;
         }
     }
