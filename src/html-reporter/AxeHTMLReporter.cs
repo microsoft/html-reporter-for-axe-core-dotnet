@@ -6,10 +6,8 @@ using AxeCore.HTMLReporter.Models;
 using AxeCore.HTMLReporter.Templates;
 using Deque.AxeCore.Commons;
 using HandlebarsDotNet;
-using System;
 using System.Globalization;
 using System.Linq;
-using System.Net;
 
 namespace AxeCore.HTMLReporter
 {
@@ -43,20 +41,29 @@ namespace AxeCore.HTMLReporter
 
             var template = handlebars.Compile(documentBody);
 
-            ReportViewModel model = CreateReportModel(results);
+            ReportViewModel model = CreateReportModel(results, options);
 
             var result = template(model);
 
             return new AxeHTMLReport(result);
         }
 
-        private ReportViewModel CreateReportModel(AxeResult results)
+        private ReportViewModel CreateReportModel(AxeResult results, AxeHTMLReportOptions options)
         {
             CultureInfo language = CultureInfo.CurrentCulture;
 
             string formattedTimestamp = results.Timestamp.HasValue
                 ? results.Timestamp.Value.DateTime.ToString("U", language.DateTimeFormat)
                 : null;
+
+            RuleGroupModel[] ruleGroups = RuleGroupUtils.CreateRuleGroups(
+                results.Violations,
+                results.Passes,
+                results.Inapplicable,
+                results.Incomplete,
+                language,
+                options)
+                .ToArray();
 
             return new ReportViewModel()
             {
@@ -79,39 +86,7 @@ namespace AxeCore.HTMLReporter
                 InapplicableRowName = Strings.InapplicableRowName,
                 InapplicableKey = ReportContants.InapplicableKey,
                 InapplicableCount = results.Inapplicable.Length,
-                RuleGroups = new RuleGroupModel[]
-                {
-                    CreateRuleGroup(ReportContants.ViolationsKey, results.Violations),
-                    CreateRuleGroup(ReportContants.PassesKey, results.Passes),
-                    CreateRuleGroup(ReportContants.InapplicableKey, results.Inapplicable),
-                    CreateRuleGroup(ReportContants.IncompleteKey, results.Incomplete),
-                }
-            };
-        }
-
-        private RuleGroupModel CreateRuleGroup(string ruleGroupId, AxeResultItem[] itemResults)
-        {
-            return new RuleGroupModel()
-            {
-                RuleGroupId = ruleGroupId,
-                Rules = itemResults.Select(ruleResult => new RuleModel()
-                {
-                    RuleId = ruleResult.Id,
-                    RuleTitle = string.Format(Strings.RuleHeaderTemplate, ruleResult.Id.Replace('-', ' '), ruleResult.Help),
-                    ImpactRowName = Strings.ImpactRowName,
-                    Impact = ruleResult.Impact,
-                    HelpUrlRowName = Strings.HelpUrlRowName,
-                    HelpUrl = ruleResult.HelpUrl,
-                    TagsRowName = Strings.TagsRowName,
-                    Tags = string.Join(", ", ruleResult.Tags),
-                    RuleNodes = ruleResult.Nodes?.Select(node => new RuleNodeModel()
-                    {
-                        HTMLLabel = Strings.HTMLLabel,
-                        HTML = node.Html,
-                        SelectorLabel = Strings.SelectorsLabel,
-                        Selector = node.Target.ToString(),
-                    }).ToArray() ?? Array.Empty<RuleNodeModel>()
-                }).ToArray(),
+                RuleGroups = ruleGroups
             };
         }
     }

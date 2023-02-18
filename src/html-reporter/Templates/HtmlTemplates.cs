@@ -12,6 +12,59 @@ namespace AxeCore.HTMLReporter.Templates
                 <meta charset=""utf-8"" />
                 <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"" />
                 <style>
+                    body {
+                        font-family: 'Segoe ui';
+                        margin: 20px;
+                    }
+
+                    h1 {
+                        text-decoration-line: underline;
+                    }
+
+                    table {
+                        border-collapse: collapse;
+                    }
+
+                    th, td {
+                        padding: 8px;
+                        text-align: left;
+                        border-bottom-style: solid;
+                        border-bottom-width: 2px;
+                    }
+
+                    .table-row {
+                        font-weight: bold;
+                    }
+
+                    .table-entry {
+                        text-align: right;
+                    }
+
+                    hr.rule-divider {
+                        border: 2px solid;
+                    }
+
+                    .node-dt {
+                        font-weight: bold;
+                    }
+
+                    .node-card {
+                        color: black;
+                        background-color: #F2F2F2;
+                        padding: 20px;
+                    }
+
+                    section.violation {
+                        color: #CC6D6D;
+                    }
+
+                    hr.violation {
+                        border-color: #CC6D6D;
+                    }
+
+                    table.violation {
+                        color: #CC6D6D;
+                    }
                 </style>
             </head>
             <body>
@@ -19,28 +72,28 @@ namespace AxeCore.HTMLReporter.Templates
                 <br />
                 <table>
                     <tr>
-                        <td>{{TestUrlRowName}}</td>
-                        <td>{{TestUrl}}</td>
+                        <td class=""table-row"">{{TestUrlRowName}}</td>
+                        <td class=""table-entry"">{{TestUrl}}</td>
                     </tr>
                     <tr>
-                        <td>{{TimestampRowName}}</td>
-                        <td>{{Timestamp}}</td>
+                        <td class=""table-row"">{{TimestampRowName}}</td>
+                        <td class=""table-entry"">{{Timestamp}}</td>
                     </tr>
                     <tr>
-                        <td>{{ViolationsRowName}}</td>
-                        <td><a href=""#{{ViolationsKey}}"">{{ViolationsCount}}</a></td>
+                        <td class=""table-row"">{{ViolationsRowName}}</td>
+                        <td class=""table-entry""><a href=""#{{ViolationsKey}}"">{{ViolationsCount}}</a></td>
                     </tr>
                     <tr>
-                        <td>{{PassesRowName}}</td>
-                        <td><a href=""#{{PassesKey}}"">{{PassesCount}}</a></td>
+                        <td class=""table-row"">{{PassesRowName}}</td>
+                        <td class=""table-entry""><a href=""#{{PassesKey}}"">{{PassesCount}}</a></td>
                     </tr>
                     <tr>
-                        <td>{{IncompleteRowName}}</td>
-                        <td><a href=""#{{IncompleteKey}}"">{{IncompleteCount}}</a></td>
+                        <td class=""table-row"">{{IncompleteRowName}}</td>
+                        <td class=""table-entry""><a href=""#{{IncompleteKey}}"">{{IncompleteCount}}</a></td>
                     </tr>
                     <tr>
-                        <td>{{InapplicableRowName}}</td>
-                        <td><a href=""#{{InapplicableKey}}"">{{InapplicableCount}}</a></td>
+                        <td class=""table-row"">{{InapplicableRowName}}</td>
+                        <td class=""table-entry""><a href=""#{{InapplicableKey}}"">{{InapplicableCount}}</a></td>
                     </tr>
                 </table>
                 <br />
@@ -51,7 +104,7 @@ namespace AxeCore.HTMLReporter.Templates
         ";
 
         internal static string RuleGroup = @"
-            <section id=""{{RuleGroupId}}"">
+            <section id=""{{RuleGroupId}}"" class=""violation"">
                 {{#Rules}}
                     {{> Rule}}
                 {{/Rules}}
@@ -59,21 +112,21 @@ namespace AxeCore.HTMLReporter.Templates
         ";
 
         internal static string Rule = @"
-            <hr />
+            <hr class=""rule-divider violation"" />
             <section id=""{{RuleId}}"">
                 <h2>{{RuleTitle}}</h2>
-                <table>
+                <table class=""violation"">
                     <tr>
-                        <td>{{ImpactRowName}}</td>
-                        <td>{{Impact}}</td>
+                        <td class=""table-row"">{{ImpactRowName}}</td>
+                        <td class=""table-entry"">{{Impact}}</td>
                     </tr>
                     <tr>
-                        <td>{{HelpUrlRowName}}</td>
-                        <td><a href=""{{HelpUrl}}"">{{HelpUrl}}</a></td>
+                        <td class=""table-row"">{{HelpUrlRowName}}</td>
+                        <td class=""table-entry""><a href=""{{HelpUrl}}"">{{HelpUrl}}</a></td>
                     </tr>
                     <tr>
-                        <td>{{TagsRowName}}</td>
-                        <td>{{Tags}}</td>
+                        <td class=""table-row"">{{TagsRowName}}</td>
+                        <td class=""table-entry"">{{Tags}}</td>
                     </tr>
                 </table>
                 <br />
@@ -84,16 +137,17 @@ namespace AxeCore.HTMLReporter.Templates
         ";
 
         internal static string RuleNode = @"
-            <div>
+            <div class=""node-card"">
                 <dl>
-                    <dt>{{HTMLLabel}}</dt>
+                    <dt class=""node-dt"">{{HTMLLabel}}</dt>
                     <dd>{{HTML}}</dd>
                 </dl>
                 <dl>
-                    <dt>{{SelectorLabel}}</dt>
+                    <dt class=""node-dt"">{{SelectorLabel}}</dt>
                     <dd>{{Selector}}</dd>
                 </dl>
             </div>
+            <br />
         ";
     }
 }

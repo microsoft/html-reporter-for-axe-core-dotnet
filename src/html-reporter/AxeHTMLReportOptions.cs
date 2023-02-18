@@ -8,5 +8,9 @@ namespace AxeCore.HTMLReporter
     /// </summary>
     public sealed class AxeHTMLReportOptions
     {
+        /// <summary>
+        /// Specifies which rule types to include in the report.
+        /// </summary>
+        public AxeReportRuleTypes ReportRuleTypes { get; set; } = AxeReportRuleTypes.Violations;
     }
 }
