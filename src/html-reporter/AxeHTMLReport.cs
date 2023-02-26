@@ -31,7 +31,13 @@ namespace AxeCore.HTMLReporter
         {
             string reportFilename = filename ?? DefaultFilename;
 
-            Directory.CreateDirectory(Path.GetDirectoryName(reportFilename));
+            string directory = Path.GetDirectoryName(reportFilename);
+
+            if (!string.IsNullOrWhiteSpace(directory))
+            {
+                Directory.CreateDirectory(Path.GetDirectoryName(reportFilename));
+            }
+
             File.WriteAllText(reportFilename, m_htmlContent);
 
             return this;

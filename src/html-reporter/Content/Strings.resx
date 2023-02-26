@@ -126,8 +126,14 @@
   <data name="ImpactRowName" xml:space="preserve">
     <value>Impact</value>
   </data>
+  <data name="InapplicableOutcome" xml:space="preserve">
+    <value>Inapplicable</value>
+  </data>
   <data name="InapplicableRowName" xml:space="preserve">
     <value>Inapplicable</value>
+  </data>
+  <data name="IncompleteOutcome" xml:space="preserve">
+    <value>Incomplete</value>
   </data>
   <data name="IncompleteRowName" xml:space="preserve">
     <value>Incomplete</value>
@@ -135,8 +141,14 @@
   <data name="PassesRowName" xml:space="preserve">
     <value>Passes</value>
   </data>
+  <data name="PassOutcome" xml:space="preserve">
+    <value>Passed</value>
+  </data>
   <data name="RuleHeaderTemplate" xml:space="preserve">
     <value>{0} - {1}</value>
+  </data>
+  <data name="RuleOutcomeRowName" xml:space="preserve">
+    <value>Outcome</value>
   </data>
   <data name="SelectorsLabel" xml:space="preserve">
     <value>Selector(s)</value>
@@ -152,6 +164,9 @@
   </data>
   <data name="Title" xml:space="preserve">
     <value>Accessibility Report</value>
+  </data>
+  <data name="ViolationOutcome" xml:space="preserve">
+    <value>Violation</value>
   </data>
   <data name="ViolationsRowName" xml:space="preserve">
     <value>Violations</value>

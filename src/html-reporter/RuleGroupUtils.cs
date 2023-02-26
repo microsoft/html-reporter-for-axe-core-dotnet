@@ -49,6 +49,14 @@ namespace AxeCore.HTMLReporter
             yield break;
         }
 
+        /// <summary>
+        /// Gets the number of occurences of a rule (i.e. nodes).
+        /// </summary>
+        public static int GetRuleGroupNodeCount(AxeResultItem[] results)
+        {
+            return results.Sum(result => result.Nodes?.Length ?? 0);
+        }
+
         private static RuleGroupModel CreateRuleGroup(string ruleGroupId, AxeResultItem[] itemResults, CultureInfo locale)
         {
             return new RuleGroupModel()
@@ -60,6 +68,9 @@ namespace AxeCore.HTMLReporter
                     RuleTitle = string.Format(
                         Strings.RuleHeaderTemplate,
                         locale.TextInfo.ToTitleCase(ruleResult.Id.Replace('-', ' ')), ruleResult.Help),
+                    RuleGroupId = ruleGroupId,
+                    RuleOutcomeRowName = Strings.RuleOutcomeRowName,
+                    RuleOutcome = GetRuleOutcome(ruleGroupId),
                     ImpactRowName = Strings.ImpactRowName,
                     Impact = ruleResult.Impact,
                     HelpUrlRowName = Strings.HelpUrlRowName,
@@ -75,6 +86,21 @@ namespace AxeCore.HTMLReporter
                     }).ToArray() ?? Array.Empty<RuleNodeModel>()
                 }).ToArray(),
             };
+        }
+
+        private static string GetRuleOutcome(string ruleGroupId)
+        {
+            switch (ruleGroupId)
+            {
+                case ReportContants.ViolationsKey:
+                    return Strings.ViolationOutcome;
+                case ReportContants.IncompleteKey:
+                    return Strings.IncompleteOutcome;
+                case ReportContants.InapplicableKey:
+                    return Strings.InapplicableOutcome;
+                default:
+                    return Strings.PassOutcome;
+            }
         }
     }
 }

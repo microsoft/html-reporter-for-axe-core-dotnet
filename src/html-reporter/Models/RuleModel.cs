@@ -19,6 +19,21 @@ namespace AxeCore.HTMLReporter.Models
         public string RuleTitle { get; set; }
 
         /// <summary>
+        /// Rule Group Id
+        /// </summary>
+        public string RuleGroupId { get; set; }
+
+        /// <summary>
+        /// Rule Outcome Row Name
+        /// </summary>
+        public string RuleOutcomeRowName { get; set; }
+
+        /// <summary>
+        /// Rule Outcome
+        /// </summary>
+        public string RuleOutcome { get; set; }
+
+        /// <summary>
         /// Impact Row Name
         /// </summary>
         public string ImpactRowName { get; set; }

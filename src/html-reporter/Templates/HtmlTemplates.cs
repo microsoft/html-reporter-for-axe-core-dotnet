@@ -15,6 +15,8 @@ namespace AxeCore.HTMLReporter.Templates
                     body {
                         font-family: 'Segoe ui';
                         margin: 20px;
+                        display: flex;
+                        flex-direction: column; 
                     }
 
                     h1 {
@@ -30,6 +32,10 @@ namespace AxeCore.HTMLReporter.Templates
                         text-align: left;
                         border-bottom-style: solid;
                         border-bottom-width: 2px;
+                    }
+
+                    .summaryRegion {
+                        width: 40%;
                     }
 
                     .table-row {
@@ -54,48 +60,92 @@ namespace AxeCore.HTMLReporter.Templates
                         padding: 20px;
                     }
 
-                    section.violation {
-                        color: #CC6D6D;
+                    section.rule {
+                        flex-direction: column;
                     }
 
-                    hr.violation {
-                        border-color: #CC6D6D;
+                    table.rule {
+                        width: 40%;
                     }
 
-                    table.violation {
-                        color: #CC6D6D;
+                    section.violations {
+                        color: #ad5c5c;
+                    }
+
+                    hr.violations {
+                        border-color: #ad5c5c;
+                    }
+
+                    table.violations {
+                        color: #ad5c5c;
+                    }
+
+                    section.passes {
+                        color: #208720;
+                    }
+
+                    hr.passes {
+                        border-color: #208720;
+                    }
+
+                    table.passes {
+                        color: #208720;
+                    }
+
+                    section.incomplete {
+                        color: #9b6d24;
+                    }
+
+                    hr.incomplete {
+                        border-color: #9b6d24;
+                    }
+
+                    table.incomplete {
+                        color: #9b6d24;
+                    }
+
+                    section.inapplicable {
+                        color: #737373;
+                    }
+
+                    hr.inapplicable {
+                        border-color: #737373;
+                    }
+
+                    table.inapplicable {
+                        color: #737373;
                     }
                 </style>
             </head>
             <body>
                 <h1>{{Title}}</h1>
                 <br />
-                <table>
-                    <tr>
-                        <td class=""table-row"">{{TestUrlRowName}}</td>
-                        <td class=""table-entry"">{{TestUrl}}</td>
-                    </tr>
-                    <tr>
-                        <td class=""table-row"">{{TimestampRowName}}</td>
-                        <td class=""table-entry"">{{Timestamp}}</td>
-                    </tr>
-                    <tr>
-                        <td class=""table-row"">{{ViolationsRowName}}</td>
-                        <td class=""table-entry""><a href=""#{{ViolationsKey}}"">{{ViolationsCount}}</a></td>
-                    </tr>
-                    <tr>
-                        <td class=""table-row"">{{PassesRowName}}</td>
-                        <td class=""table-entry""><a href=""#{{PassesKey}}"">{{PassesCount}}</a></td>
-                    </tr>
-                    <tr>
-                        <td class=""table-row"">{{IncompleteRowName}}</td>
-                        <td class=""table-entry""><a href=""#{{IncompleteKey}}"">{{IncompleteCount}}</a></td>
-                    </tr>
-                    <tr>
-                        <td class=""table-row"">{{InapplicableRowName}}</td>
-                        <td class=""table-entry""><a href=""#{{InapplicableKey}}"">{{InapplicableCount}}</a></td>
-                    </tr>
-                </table>
+                    <table class=""summaryRegion"">
+                        <tr>
+                            <td class=""table-row"">{{TestUrlRowName}}</td>
+                            <td class=""table-entry"">{{TestUrl}}</td>
+                        </tr>
+                        <tr>
+                            <td class=""table-row"">{{TimestampRowName}}</td>
+                            <td class=""table-entry"">{{Timestamp}}</td>
+                        </tr>
+                        <tr>
+                            <td class=""table-row"">{{ViolationsRowName}}</td>
+                            <td class=""table-entry""><a href=""#{{ViolationsKey}}"">{{ViolationsCount}}</a></td>
+                        </tr>
+                        <tr>
+                            <td class=""table-row"">{{PassesRowName}}</td>
+                            <td class=""table-entry""><a href=""#{{PassesKey}}"">{{PassesCount}}</a></td>
+                        </tr>
+                        <tr>
+                            <td class=""table-row"">{{IncompleteRowName}}</td>
+                            <td class=""table-entry""><a href=""#{{IncompleteKey}}"">{{IncompleteCount}}</a></td>
+                        </tr>
+                        <tr>
+                            <td class=""table-row"">{{InapplicableRowName}}</td>
+                            <td class=""table-entry""><a href=""#{{InapplicableKey}}"">{{InapplicableCount}}</a></td>
+                        </tr>
+                    </table>
                 <br />
                 {{#RuleGroups}}
                     {{> RuleGroup}}
@@ -104,7 +154,7 @@ namespace AxeCore.HTMLReporter.Templates
         ";
 
         internal static string RuleGroup = @"
-            <section id=""{{RuleGroupId}}"" class=""violation"">
+            <section id=""{{RuleGroupId}}"" class=""{{RuleGroupId}}"">
                 {{#Rules}}
                     {{> Rule}}
                 {{/Rules}}
@@ -112,10 +162,14 @@ namespace AxeCore.HTMLReporter.Templates
         ";
 
         internal static string Rule = @"
-            <hr class=""rule-divider violation"" />
-            <section id=""{{RuleId}}"">
+            <hr class=""rule-divider {{RuleGroupId}}"" />
+            <section id=""rule {{RuleId}}"">
                 <h2>{{RuleTitle}}</h2>
-                <table class=""violation"">
+                <table class=""rule {{RuleGroupId}}"">
+                    <tr>
+                        <td class=""table-row"">{{RuleOutcomeRowName}}</td>
+                        <td class=""table-entry"">{{RuleOutcome}}</td>
+                    </tr>
                     <tr>
                         <td class=""table-row"">{{ImpactRowName}}</td>
                         <td class=""table-entry"">{{Impact}}</td>

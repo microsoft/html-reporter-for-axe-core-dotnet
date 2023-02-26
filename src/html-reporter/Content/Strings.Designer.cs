@@ -90,9 +90,27 @@ namespace AxeCore.HTMLReporter.Content {
         /// <summary>
         ///   Looks up a localized string similar to Inapplicable.
         /// </summary>
+        public static string InapplicableOutcome {
+            get {
+                return ResourceManager.GetString("InapplicableOutcome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inapplicable.
+        /// </summary>
         public static string InapplicableRowName {
             get {
                 return ResourceManager.GetString("InapplicableRowName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Incomplete.
+        /// </summary>
+        public static string IncompleteOutcome {
+            get {
+                return ResourceManager.GetString("IncompleteOutcome", resourceCulture);
             }
         }
         
@@ -115,11 +133,29 @@ namespace AxeCore.HTMLReporter.Content {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Passed.
+        /// </summary>
+        public static string PassOutcome {
+            get {
+                return ResourceManager.GetString("PassOutcome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0} - {1}.
         /// </summary>
         public static string RuleHeaderTemplate {
             get {
                 return ResourceManager.GetString("RuleHeaderTemplate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Outcome.
+        /// </summary>
+        public static string RuleOutcomeRowName {
+            get {
+                return ResourceManager.GetString("RuleOutcomeRowName", resourceCulture);
             }
         }
         
@@ -165,6 +201,15 @@ namespace AxeCore.HTMLReporter.Content {
         public static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Violation.
+        /// </summary>
+        public static string ViolationOutcome {
+            get {
+                return ResourceManager.GetString("ViolationOutcome", resourceCulture);
             }
         }
         
