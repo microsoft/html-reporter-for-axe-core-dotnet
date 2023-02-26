@@ -33,7 +33,7 @@ namespace AxeCore.HTMLReporter
 
             string directory = Path.GetDirectoryName(reportFilename);
 
-            if(!string.IsNullOrWhiteSpace(directory)) 
+            if (!string.IsNullOrWhiteSpace(directory))
             {
                 Directory.CreateDirectory(Path.GetDirectoryName(reportFilename));
             }
