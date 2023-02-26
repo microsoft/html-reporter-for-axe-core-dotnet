@@ -32,7 +32,19 @@ app.MapGet("/", async (context) =>
         axeResults = MockDataFactory.CreateMockResultData();
     }
 
-    AxeHTMLReport report = reporter.CreateReport(axeResults);
+    AxeReportRuleTypes[] reportRuleTypes = (context.Request.Query.ContainsKey(nameof(AxeHTMLReportOptions.ReportRuleTypes))
+        ? context.Request.Query[nameof(AxeHTMLReportOptions.ReportRuleTypes)]
+            .Select(queryItem => Enum.Parse<AxeReportRuleTypes>(queryItem))
+            .ToArray()
+        : new AxeReportRuleTypes[] { AxeReportRuleTypes.Violations });
+
+    AxeHTMLReportOptions options = new()
+    {
+        ReportRuleTypes = reportRuleTypes
+            .Aggregate(reportRuleTypes.First(), (last, next) => last | next)
+    };
+
+    AxeHTMLReport report = reporter.CreateReport(axeResults, options);
     await context.Response.WriteAsync(report.ToString());
 });
 

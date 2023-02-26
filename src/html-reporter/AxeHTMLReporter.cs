@@ -65,6 +65,11 @@ namespace AxeCore.HTMLReporter
                 options)
                 .ToArray();
 
+            int violationCount = RuleGroupUtils.GetRuleGroupNodeCount(results.Violations);
+            int passesCount = RuleGroupUtils.GetRuleGroupNodeCount(results.Passes);
+            int incompleteCount = RuleGroupUtils.GetRuleGroupNodeCount(results.Incomplete);
+            int inapplicableCount = RuleGroupUtils.GetRuleGroupNodeCount(results.Inapplicable);
+
             return new ReportViewModel()
             {
                 LanguageCode = language.TwoLetterISOLanguageName,
@@ -76,16 +81,16 @@ namespace AxeCore.HTMLReporter
                 Timestamp = formattedTimestamp,
                 ViolationsRowName = Strings.ViolationsRowName,
                 ViolationsKey = ReportContants.ViolationsKey,
-                ViolationsCount = results.Violations.Length,
+                ViolationsCount = violationCount,
                 PassesRowName = Strings.PassesRowName,
                 PassesKey = ReportContants.PassesKey,
-                PassesCount = results.Passes.Length,
+                PassesCount = passesCount,
                 IncompleteRowName = Strings.IncompleteRowName,
                 IncompleteKey = ReportContants.IncompleteKey,
-                IncompleteCount = results.Incomplete.Length,
+                IncompleteCount = incompleteCount,
                 InapplicableRowName = Strings.InapplicableRowName,
                 InapplicableKey = ReportContants.InapplicableKey,
-                InapplicableCount = results.Inapplicable.Length,
+                InapplicableCount = inapplicableCount,
                 RuleGroups = ruleGroups
             };
         }
