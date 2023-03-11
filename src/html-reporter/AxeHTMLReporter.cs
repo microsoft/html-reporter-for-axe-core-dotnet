@@ -19,6 +19,11 @@ namespace AxeCore.HTMLReporter
         /// </summary>
         public static AxeHTMLReporter Instance { get; }
 
+        private static readonly AxeHTMLReportOptions s_defaultOptions = new AxeHTMLReportOptions()
+        {
+            ReportRuleTypes = AxeReportRuleTypes.Violations
+        };
+
         static AxeHTMLReporter()
         {
             Instance = new AxeHTMLReporter();
@@ -41,7 +46,9 @@ namespace AxeCore.HTMLReporter
 
             var template = handlebars.Compile(documentBody);
 
-            ReportViewModel model = CreateReportModel(results, options);
+            AxeHTMLReportOptions mergedOptions = options ?? s_defaultOptions;
+
+            ReportViewModel model = CreateReportModel(results, mergedOptions);
 
             var result = template(model);
 
@@ -65,10 +72,17 @@ namespace AxeCore.HTMLReporter
                 options)
                 .ToArray();
 
+            AxeReportRuleTypes rulesToInclude = options.ReportRuleTypes;
+
             int violationCount = RuleGroupUtils.GetRuleGroupNodeCount(results.Violations);
             int passesCount = RuleGroupUtils.GetRuleGroupNodeCount(results.Passes);
             int incompleteCount = RuleGroupUtils.GetRuleGroupNodeCount(results.Incomplete);
             int inapplicableCount = RuleGroupUtils.GetRuleGroupNodeCount(results.Inapplicable);
+
+            bool showViolationsRulesLink = violationCount > 0 && rulesToInclude.IncludesViolations();
+            bool showPassesRulesLink = passesCount > 0 && rulesToInclude.IncludesPasses();
+            bool showIncompleteRulesLink = incompleteCount > 0 && rulesToInclude.IncludesIncomplete();
+            bool showInapplicableRulesLink = inapplicableCount > 0 && rulesToInclude.IncludesInapplicable();
 
             return new ReportViewModel()
             {
@@ -91,7 +105,11 @@ namespace AxeCore.HTMLReporter
                 InapplicableRowName = Strings.InapplicableRowName,
                 InapplicableKey = ReportContants.InapplicableKey,
                 InapplicableCount = inapplicableCount,
-                RuleGroups = ruleGroups
+                RuleGroups = ruleGroups,
+                ShowViolationsRulesLink = showViolationsRulesLink,
+                ShowPassesRulesLink = showPassesRulesLink,
+                ShowIncompleteRulesLink = showIncompleteRulesLink,
+                ShowInapplicableRulesLink = showInapplicableRulesLink,
             };
         }
     }
