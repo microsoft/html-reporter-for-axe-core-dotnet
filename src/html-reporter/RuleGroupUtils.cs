@@ -29,19 +29,19 @@ namespace AxeCore.HTMLReporter
         {
             AxeReportRuleTypes rulesToInclude = options?.ReportRuleTypes ?? AxeReportRuleTypes.Violations;
 
-            if (rulesToInclude.HasFlag(AxeReportRuleTypes.Violations) || rulesToInclude.HasFlag(AxeReportRuleTypes.All))
+            if (rulesToInclude.IncludesViolations())
             {
                 yield return CreateRuleGroup(ReportContants.ViolationsKey, violations, language);
             }
-            if (rulesToInclude.HasFlag(AxeReportRuleTypes.Passes) || rulesToInclude.HasFlag(AxeReportRuleTypes.All))
+            if (rulesToInclude.IncludesPasses())
             {
                 yield return CreateRuleGroup(ReportContants.PassesKey, passes, language);
             }
-            if (rulesToInclude.HasFlag(AxeReportRuleTypes.Inapplicable) || rulesToInclude.HasFlag(AxeReportRuleTypes.All))
+            if (rulesToInclude.IncludesInapplicable())
             {
                 yield return CreateRuleGroup(ReportContants.InapplicableKey, inapplicable, language);
             }
-            if (rulesToInclude.HasFlag(AxeReportRuleTypes.Incomplete) || rulesToInclude.HasFlag(AxeReportRuleTypes.All))
+            if (rulesToInclude.IncludesIncomplete())
             {
                 yield return CreateRuleGroup(ReportContants.IncompleteKey, incomplete, language);
             }

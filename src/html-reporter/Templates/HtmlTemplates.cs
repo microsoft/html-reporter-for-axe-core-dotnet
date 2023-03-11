@@ -131,19 +131,43 @@ namespace AxeCore.HTMLReporter.Templates
                         </tr>
                         <tr>
                             <td class=""table-row"">{{ViolationsRowName}}</td>
-                            <td class=""table-entry""><a href=""#{{ViolationsKey}}"">{{ViolationsCount}}</a></td>
+                            <td class=""table-entry"">
+                                {{#if ShowViolationsRulesLink}}
+                                <a href=""#{{ViolationsKey}}"">{{ViolationsCount}}</a>
+                                {{else}}
+                                <span>{{ViolationsCount}}</span>
+                                {{/if}}
+                            </td>
                         </tr>
                         <tr>
                             <td class=""table-row"">{{PassesRowName}}</td>
-                            <td class=""table-entry""><a href=""#{{PassesKey}}"">{{PassesCount}}</a></td>
+                            <td class=""table-entry"">
+                                {{#if ShowPassesRulesLink}}
+                                <a href=""#{{PassesKey}}"">{{PassesCount}}</a>
+                                {{else}}
+                                <span>{{PassesCount}}</span>
+                                {{/if}}
+                            </td>
                         </tr>
                         <tr>
                             <td class=""table-row"">{{IncompleteRowName}}</td>
-                            <td class=""table-entry""><a href=""#{{IncompleteKey}}"">{{IncompleteCount}}</a></td>
+                            <td class=""table-entry"">
+                                {{#if ShowIncompleteRulesLink}}
+                                <a href=""#{{IncompleteKey}}"">{{IncompleteCount}}</a>
+                                {{else}}
+                                <span>{{IncompleteCount}}</span>
+                                {{/if}}
+                            </td>
                         </tr>
                         <tr>
                             <td class=""table-row"">{{InapplicableRowName}}</td>
-                            <td class=""table-entry""><a href=""#{{InapplicableKey}}"">{{InapplicableCount}}</a></td>
+                            <td class=""table-entry"">
+                                {{#if ShowInapplicableRulesLink}}
+                                <a href=""#{{InapplicableKey}}"">{{InapplicableCount}}</a>
+                                {{else}}
+                                <span>{{InapplicableCount}}</span>
+                                {{/if}}
+                            </td>
                         </tr>
                     </table>
                 <br />

@@ -107,5 +107,25 @@ namespace AxeCore.HTMLReporter.Models
         /// Rule Groups
         /// </summary>
         public RuleGroupModel[] RuleGroups { get; set; }
+
+        /// <summary>
+        /// Should the count of the violated rules be shown as a link?
+        /// </summary>
+        public bool ShowViolationsRulesLink { get; set; }
+
+        /// <summary>
+        /// Should the count of the passed rules be shown as a link?
+        /// </summary>
+        public bool ShowPassesRulesLink { get; set; }
+
+        /// <summary>
+        /// Should the count of the inapplicable rules be shown as a link?
+        /// </summary>
+        public bool ShowInapplicableRulesLink { get; set; }
+
+        /// <summary>
+        /// Should the count of the incomplete rules be shown as a link?
+        /// </summary>
+        public bool ShowIncompleteRulesLink { get; set; }
     }
 }
