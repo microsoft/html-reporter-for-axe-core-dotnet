@@ -11,3 +11,8 @@ jobs:
     displayName: 'Install .NET Core SDK'
     inputs:
       version: 6.x
+
+  - task: ms.vss-governance-buildtask.governance-build-task-component-detection.ComponentGovernanceComponentDetection@0
+    displayName: 'Component Governance Detection'
+    inputs:
+      alertWarningLevel: Medium
