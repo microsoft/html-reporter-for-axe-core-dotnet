@@ -3,7 +3,7 @@
 name: AxeCore HtmlReporter Official
 
 jobs:
-- job: Validate and Release
+- job: Release
   pool:
     vmImage: 'windows-2022'
   steps:
