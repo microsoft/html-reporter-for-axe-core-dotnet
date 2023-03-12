@@ -1,5 +1,7 @@
 # Official Release Pipeline
 
+name: Build, Validate and Release
+
 jobs:
 - job: Build, Validate and Release
   pool:
