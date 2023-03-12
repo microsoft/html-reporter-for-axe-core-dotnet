@@ -1,6 +1,6 @@
 # Official Release Pipeline
 
-name: Build, Validate and Release
+name: AxeCore HtmlReporter Official
 
 jobs:
 - job: Build, Validate and Release
