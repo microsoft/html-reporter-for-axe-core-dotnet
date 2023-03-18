@@ -1,0 +1,1 @@
+# AxeCore.HTMLReporter.Playwright
