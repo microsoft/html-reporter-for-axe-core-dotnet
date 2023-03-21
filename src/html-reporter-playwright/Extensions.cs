@@ -3,7 +3,6 @@
 
 using Deque.AxeCore.Commons;
 using Deque.AxeCore.Playwright;
-using HandlebarsDotNet;
 using Microsoft.Playwright;
 using System.Threading.Tasks;
 
