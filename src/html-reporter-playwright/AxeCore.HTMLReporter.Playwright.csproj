@@ -17,4 +17,8 @@
 	<PackageReference Include="Deque.AxeCore.Commons" />
 	<PackageReference Include="Deque.AxeCore.Playwright" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\html-reporter\AxeCore.HTMLReporter.csproj" />
+  </ItemGroup>
 </Project>
