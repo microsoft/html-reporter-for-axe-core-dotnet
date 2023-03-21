@@ -19,6 +19,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AxeCore.HTMLReporter.Tests"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AxeCore.HTMLReporter.DevServer", "src\dev-server\AxeCore.HTMLReporter.DevServer.csproj", "{CC2522E5-8DA8-4017-BF55-A520F1E2C1A7}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AxeCore.HTMLReporter.Playwright", "src\html-reporter-playwright\AxeCore.HTMLReporter.Playwright.csproj", "{337DD0CB-3FF6-48EB-992F-B6EFCF612DD2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AxeCore.HTMLReporter.Playwright.Tests", "tests\html-reporter-playwright\AxeCore.HTMLReporter.Playwright.Tests.csproj", "{4A50CAB8-E505-444D-9A87-76796F44B1FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +41,14 @@ Global
 		{CC2522E5-8DA8-4017-BF55-A520F1E2C1A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC2522E5-8DA8-4017-BF55-A520F1E2C1A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC2522E5-8DA8-4017-BF55-A520F1E2C1A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{337DD0CB-3FF6-48EB-992F-B6EFCF612DD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{337DD0CB-3FF6-48EB-992F-B6EFCF612DD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{337DD0CB-3FF6-48EB-992F-B6EFCF612DD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{337DD0CB-3FF6-48EB-992F-B6EFCF612DD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A50CAB8-E505-444D-9A87-76796F44B1FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A50CAB8-E505-444D-9A87-76796F44B1FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A50CAB8-E505-444D-9A87-76796F44B1FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A50CAB8-E505-444D-9A87-76796F44B1FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

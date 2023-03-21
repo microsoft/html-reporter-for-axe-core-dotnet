@@ -1,8 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
 	  <TargetFrameworks>net6.0</TargetFrameworks>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="TestData\default-test-page.html" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
@@ -12,9 +15,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\html-reporter\AxeCore.HTMLReporter.Playwright.csproj" />
 	<PackageReference Include="Microsoft.Playwright" />
+	<PackageReference Include="Microsoft.Playwright.NUnit" />
 	<PackageReference Include="Deque.AxeCore.Commons" />
 	<PackageReference Include="Deque.AxeCore.Playwright" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="TestData\default-test-page.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\html-reporter-playwright\AxeCore.HTMLReporter.Playwright.csproj" />
   </ItemGroup>
 </Project>

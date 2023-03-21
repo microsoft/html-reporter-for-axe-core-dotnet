@@ -54,7 +54,7 @@ namespace AxeCore.HTMLReporter
         /// </summary>
         public static int GetRuleGroupNodeCount(AxeResultItem[] results)
         {
-            return results.Sum(result => result.Nodes?.Length ?? 0);
+            return results?.Sum(result => result.Nodes?.Length ?? 0) ?? 0;
         }
 
         private static RuleGroupModel CreateRuleGroup(string ruleGroupId, AxeResultItem[] itemResults, CultureInfo locale)
