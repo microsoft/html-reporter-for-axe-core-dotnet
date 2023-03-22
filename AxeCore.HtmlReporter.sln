@@ -23,6 +23,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AxeCore.HTMLReporter.Playwr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AxeCore.HTMLReporter.Playwright.Tests", "tests\html-reporter-playwright\AxeCore.HTMLReporter.Playwright.Tests.csproj", "{4A50CAB8-E505-444D-9A87-76796F44B1FC}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AxeCore.HTMLReporter.Selenium", "src\html-reporter-selenium\AxeCore.HTMLReporter.Selenium.csproj", "{0388ECAE-6916-467C-9BFE-17F21C04BB49}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AxeCore.HTMLReporter.Selenium.Tests", "tests\html-reporter-selenium\AxeCore.HTMLReporter.Selenium.Tests.csproj", "{06E2B8CA-2FDA-45BC-A3F9-DF3CF069C2A9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +53,14 @@ Global
 		{4A50CAB8-E505-444D-9A87-76796F44B1FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A50CAB8-E505-444D-9A87-76796F44B1FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A50CAB8-E505-444D-9A87-76796F44B1FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0388ECAE-6916-467C-9BFE-17F21C04BB49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0388ECAE-6916-467C-9BFE-17F21C04BB49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0388ECAE-6916-467C-9BFE-17F21C04BB49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0388ECAE-6916-467C-9BFE-17F21C04BB49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06E2B8CA-2FDA-45BC-A3F9-DF3CF069C2A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06E2B8CA-2FDA-45BC-A3F9-DF3CF069C2A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06E2B8CA-2FDA-45BC-A3F9-DF3CF069C2A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06E2B8CA-2FDA-45BC-A3F9-DF3CF069C2A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
