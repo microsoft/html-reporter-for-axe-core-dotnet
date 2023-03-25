@@ -4,7 +4,7 @@
 namespace AxeCore.HTMLReporter.Playwright
 {
     /// <inheritdoc />
-    public sealed class PlaywrightAxeHtmlReportOptions : AxeHTMLReportOptions
+    public sealed class PlaywrightAxeHTMLReportOptions : AxeHTMLReportOptions
     {
         /// <summary>
         /// Report Filename

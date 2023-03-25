@@ -23,7 +23,7 @@ namespace AxeCore.HTMLReporter.Playwright
         public static async Task<AxeResult> RunAxe(
             this IPage page,
             AxeRunOptions options,
-            PlaywrightAxeHtmlReportOptions htmlReportOptions)
+            PlaywrightAxeHTMLReportOptions htmlReportOptions)
             => await RunAxeInner(page, null, options, null, htmlReportOptions);
 
         /// <summary>
@@ -39,13 +39,13 @@ namespace AxeCore.HTMLReporter.Playwright
             AxeRunContext context,
             AxeRunOptions options,
             string axeSource,
-            PlaywrightAxeHtmlReportOptions htmlReportOptions)
+            PlaywrightAxeHTMLReportOptions htmlReportOptions)
             => await RunAxeInner(page, context, options, axeSource, htmlReportOptions);
 
         public static async Task<AxeResult> RunAxe(
             this ILocator locator,
             AxeRunOptions options,
-            PlaywrightAxeHtmlReportOptions htmlReportOptions)
+            PlaywrightAxeHTMLReportOptions htmlReportOptions)
         {
             AxeResult results = await locator.RunAxe(options);
             CreateReportAndWriteFile(results, htmlReportOptions);
@@ -58,7 +58,7 @@ namespace AxeCore.HTMLReporter.Playwright
             AxeRunContext context,
             AxeRunOptions runOptions,
             string axeSource,
-            PlaywrightAxeHtmlReportOptions htmlReportOptions)
+            PlaywrightAxeHTMLReportOptions htmlReportOptions)
         {
             AxeResult results = await page.RunAxe(context, runOptions, axeSource);
             CreateReportAndWriteFile(results, htmlReportOptions);
@@ -66,7 +66,7 @@ namespace AxeCore.HTMLReporter.Playwright
             return results;
         }
 
-        private static void CreateReportAndWriteFile(AxeResult results, PlaywrightAxeHtmlReportOptions htmlReportOptions)
+        private static void CreateReportAndWriteFile(AxeResult results, PlaywrightAxeHTMLReportOptions htmlReportOptions)
         {
             IAxeHTMLReporter reporter = AxeHTMLReporter.Instance;
             AxeHTMLReport report = reporter.CreateReport(results, htmlReportOptions);
