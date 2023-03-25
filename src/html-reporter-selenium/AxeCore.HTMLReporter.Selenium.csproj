@@ -12,6 +12,12 @@
 	<GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
   </PropertyGroup>
 
+	<ItemGroup>
+		<PackageReference Include="Selenium.WebDriver" />
+		<PackageReference Include="Deque.AxeCore.Commons" />
+		<PackageReference Include="Deque.AxeCore.Selenium" />
+	</ItemGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\html-reporter\AxeCore.HTMLReporter.csproj" />
   </ItemGroup>

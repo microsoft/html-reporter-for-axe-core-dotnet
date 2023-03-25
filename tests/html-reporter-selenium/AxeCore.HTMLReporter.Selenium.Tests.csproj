@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
 	  <TargetFrameworks>net6.0</TargetFrameworks>
     <IsPackable>false</IsPackable>
@@ -9,9 +9,20 @@
     <PackageReference Include="Moq" />
     <PackageReference Include="NUnit" />
     <PackageReference Include="NUnit3TestAdapter" />
+    <PackageReference Include="Selenium.WebDriver" />
+	<PackageReference Include="WebDriverManager" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\html-reporter-selenium\AxeCore.HTMLReporter.Selenium.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="TestData\" />
+  </ItemGroup>
+  <ItemGroup>
+	<Content Include="TestData\default-test-page.html">
+		<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</Content>
   </ItemGroup>
 </Project>
