@@ -2,7 +2,14 @@
 
 Dotnet library for converting [axe-core](https://github.com/dequelabs/axe-core) run results to a HTML report. Built on top of the work done in [axe-core-nuget](https://github.com/dequelabs/axe-core-nuget).
 
-Provides integration libraries for [Deque.AxeCore.Playwright](https://github.com/dequelabs/axe-core-nuget/tree/develop/packages/playwright) and [Deque.AxeCore.Selenium](https://github.com/dequelabs/axe-core-nuget/tree/develop/packages/selenium) 
+Provides integration libraries for [Deque.AxeCore.Playwright](https://github.com/dequelabs/axe-core-nuget/tree/develop/packages/playwright) and [Deque.AxeCore.Selenium](https://github.com/dequelabs/axe-core-nuget/tree/develop/packages/selenium)
+
+The packages in this repo are listed below:
+
+- [AxeCore.HTMLReporter](./src/html-reporter/README.md)
+- [AxeCore.HTMLReporter.Playwright](./src/html-reporter-playwright/README.md)
+- [AxeCore.HTMLReporter.Selenium](./src/html-reporter-selenium/README.md)
+
 
 ## Contributing
 

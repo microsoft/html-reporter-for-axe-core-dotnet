@@ -23,7 +23,7 @@ namespace AxeCore.HTMLReporter.Playwright.Tests
 
             await NavigateToTestPage();
 
-            PlaywrightAxeHtmlReportOptions htmlReportOptions = new()
+            PlaywrightAxeHTMLReportOptions htmlReportOptions = new()
             {
                 ReportFilename = reportFilename,
             };
@@ -40,7 +40,7 @@ namespace AxeCore.HTMLReporter.Playwright.Tests
 
             await NavigateToTestPage();
 
-            PlaywrightAxeHtmlReportOptions htmlReportOptions = new()
+            PlaywrightAxeHTMLReportOptions htmlReportOptions = new()
             {
                 ReportFilename = reportFilename,
             };
@@ -65,7 +65,7 @@ namespace AxeCore.HTMLReporter.Playwright.Tests
 
             await NavigateToTestPage();
 
-            PlaywrightAxeHtmlReportOptions htmlReportOptions = new()
+            PlaywrightAxeHTMLReportOptions htmlReportOptions = new()
             {
                 ReportFilename = reportFilename,
             };
