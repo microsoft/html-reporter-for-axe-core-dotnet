@@ -6,6 +6,7 @@ using Deque.AxeCore.Selenium;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Edge;
 using System;
 using System.IO;
 using WebDriverManager;
@@ -22,13 +23,13 @@ namespace AxeCore.HTMLReporter.Selenium.Tests
         public IntegrationTests()
         {
             DriverManager driverManager = new();
-            driverManager.SetUpDriver(new ChromeConfig());
+            driverManager.SetUpDriver(new EdgeConfig());
         }
 
         [SetUp]
         public void SetupTest()
         {
-            m_webDriver = new ChromeDriver();
+            m_webDriver = new EdgeDriver();
         }
 
         [TearDown]

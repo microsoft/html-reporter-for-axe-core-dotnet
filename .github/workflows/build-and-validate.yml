@@ -18,9 +18,6 @@ jobs:
 
       - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v3
-      
-      - name: Update Chrome
-        run: choco upgrade googlechrome
 
       - name: Install dependencies
         run: dotnet restore
