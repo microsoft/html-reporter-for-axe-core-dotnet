@@ -30,7 +30,7 @@ namespace AxeCore.HTMLReporter.Selenium.Tests
         {
             ChromeOptions options = new();
             options.AddArguments("--headless", "--no-sandbox");
-            m_webDriver = new ChromeDriver();
+            m_webDriver = new ChromeDriver(options);
         }
 
         [TearDown]
