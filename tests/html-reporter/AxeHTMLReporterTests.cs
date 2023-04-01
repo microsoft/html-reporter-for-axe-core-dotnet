@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
+using AxeCore.HTMLReporter.Image;
 using NUnit.Framework;
 
 namespace AxeCore.HTMLReporter.Tests
@@ -14,6 +15,21 @@ namespace AxeCore.HTMLReporter.Tests
             AxeHTMLReporter reporter = AxeHTMLReporter.Instance;
 
             AxeHTMLReport report = reporter.CreateReport(TestData.CreateDefaultResult());
+
+            Assert.IsNotNull(report);
+            Assert.IsNotEmpty(report.ToString());
+        }
+
+        [Test]
+        public void CreateReport_WithImageContext_ReportShouldNotBeNullOrEmpty()
+        {
+            AxeHTMLReporter reporter = AxeHTMLReporter.Instance;
+
+            ReportImage reportImage = new ReportImage(new byte[] { 1, 1, 1, 1 }, ImageFormat.JPeg);
+
+            AxeHTMLReportImageContext imageContext = new AxeHTMLReportImageContext(reportImage);
+
+            AxeHTMLReport report = reporter.CreateReport(TestData.CreateDefaultResult(), null, imageContext);
 
             Assert.IsNotNull(report);
             Assert.IsNotEmpty(report.ToString());

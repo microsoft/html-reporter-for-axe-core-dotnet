@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
+using System;
+
 namespace AxeCore.HTMLReporter.Models
 {
     /// <summary>
@@ -102,6 +104,11 @@ namespace AxeCore.HTMLReporter.Models
         /// Inapplicable Count
         /// </summary>
         public int InapplicableCount { get; set; }
+
+        /// <summary>
+        /// Source Image
+        /// </summary>
+        public Uri SourceImage { get; set; }
 
         /// <summary>
         /// Rule Groups
