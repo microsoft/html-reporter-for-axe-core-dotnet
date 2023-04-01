@@ -2,10 +2,12 @@
 // Licensed under the MIT License.
 
 using AxeCore.HTMLReporter.Content;
+using AxeCore.HTMLReporter.Image;
 using AxeCore.HTMLReporter.Models;
 using AxeCore.HTMLReporter.Templates;
 using Deque.AxeCore.Commons;
 using HandlebarsDotNet;
+using System;
 using System.Globalization;
 using System.Linq;
 
@@ -34,7 +36,7 @@ namespace AxeCore.HTMLReporter
         }
 
         /// <inheritdoc />
-        public AxeHTMLReport CreateReport(AxeResult results, AxeHTMLReportOptions options = null)
+        public AxeHTMLReport CreateReport(AxeResult results, AxeHTMLReportOptions options = null, AxeHTMLReportImageContext imageContext = null)
         {
             string documentBody = HtmlTemplates.DocumentBody;
 
@@ -48,14 +50,14 @@ namespace AxeCore.HTMLReporter
 
             AxeHTMLReportOptions mergedOptions = options ?? s_defaultOptions;
 
-            ReportViewModel model = CreateReportModel(results, mergedOptions);
+            ReportViewModel model = CreateReportModel(results, mergedOptions, imageContext);
 
             var result = template(model);
 
             return new AxeHTMLReport(result);
         }
 
-        private ReportViewModel CreateReportModel(AxeResult results, AxeHTMLReportOptions options)
+        private ReportViewModel CreateReportModel(AxeResult results, AxeHTMLReportOptions options, AxeHTMLReportImageContext imageContext)
         {
             CultureInfo language = CultureInfo.CurrentCulture;
 
@@ -84,6 +86,8 @@ namespace AxeCore.HTMLReporter
             bool showIncompleteRulesLink = incompleteCount > 0 && rulesToInclude.IncludesIncomplete();
             bool showInapplicableRulesLink = inapplicableCount > 0 && rulesToInclude.IncludesInapplicable();
 
+            Uri sourceImageDataUri = CreateSourceImageDataUri(imageContext);
+
             return new ReportViewModel()
             {
                 LanguageCode = language.TwoLetterISOLanguageName,
@@ -105,12 +109,26 @@ namespace AxeCore.HTMLReporter
                 InapplicableRowName = Strings.InapplicableRowName,
                 InapplicableKey = ReportContants.InapplicableKey,
                 InapplicableCount = inapplicableCount,
+                SourceImage = sourceImageDataUri,
                 RuleGroups = ruleGroups,
                 ShowViolationsRulesLink = showViolationsRulesLink,
                 ShowPassesRulesLink = showPassesRulesLink,
                 ShowIncompleteRulesLink = showIncompleteRulesLink,
                 ShowInapplicableRulesLink = showInapplicableRulesLink,
             };
+        }
+
+        private static Uri CreateSourceImageDataUri(AxeHTMLReportImageContext imageContext)
+        {
+            if (imageContext != null)
+            {
+                ReportImage sourceImage = imageContext.SourceImage;
+                Uri sourceImageDataUri = ImageUtils.CreateDataUri(sourceImage.Bytes, sourceImage.Format);
+
+                return sourceImageDataUri;
+            }
+
+            return null;
         }
     }
 }
