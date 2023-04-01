@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\html-reporter-playwright\AxeCore.HTMLReporter.Playwright.csproj" />
+    <ProjectReference Include="..\html-reporter-selenium\AxeCore.HTMLReporter.Selenium.csproj" />
     <ProjectReference Include="..\html-reporter\AxeCore.HTMLReporter.csproj" />
 	<PackageReference Include="Microsoft.Playwright" />
 	<PackageReference Include="Deque.AxeCore.Commons" />
