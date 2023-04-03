@@ -8,7 +8,7 @@ The packages in this repo are listed below:
 
 - [AxeCore.HTMLReporter](./src/html-reporter/README.md)
 - [AxeCore.HTMLReporter.Playwright](./src/html-reporter-playwright/README.md)
-- [AxeCore.HTMLReporter.Selenium](./src/html-reporter-selenium/README.md)
+- [AxeCore.HTMLReporter.Selenium](./src/html-reporter-selenium/README.MD)
 
 
 ## Contributing
