@@ -1,0 +1,31 @@
+# Official Release Pipeline
+
+name: AxeCore HtmlReporter Official
+
+jobs:
+- job: Release
+  pool:
+    vmImage: 'windows-2022'
+  steps:
+  - task: UseDotNet@2
+    displayName: 'Install .NET Core SDK'
+    inputs:
+      version: 6.x
+
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: 'restore'
+
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: 'build'
+      arguments: '--configuration Release'
+
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: 'test'
+
+  - task: ms.vss-governance-buildtask.governance-build-task-component-detection.ComponentGovernanceComponentDetection@0
+    displayName: 'Component Governance Detection'
+    inputs:
+      alertWarningLevel: Medium
