@@ -10,6 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 		CODE_OF_CONDUCT.md = CODE_OF_CONDUCT.md
 		Directory.Packages.props = Directory.Packages.props
 		LICENSE = LICENSE
+		PackageIcon.png = PackageIcon.png
 		README.md = README.md
 		SECURITY.md = SECURITY.md
 		SUPPORT.md = SUPPORT.md
