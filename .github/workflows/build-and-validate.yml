@@ -13,7 +13,9 @@ jobs:
 
       - uses: browser-actions/setup-chrome@v1
         with:
-          chrome-version: 113.0
+            chrome-version: stable
+
+      - run: chrome --version
 
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v2
