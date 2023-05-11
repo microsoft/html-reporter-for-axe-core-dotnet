@@ -11,6 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - uses: browser-actions/setup-chrome@v1
+        with:
+            chrome-version: stable
+
+      - run: chrome --version
+
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v2
         with:

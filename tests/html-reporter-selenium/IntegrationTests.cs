@@ -28,7 +28,11 @@ namespace AxeCore.HTMLReporter.Selenium.Tests
         [SetUp]
         public void SetupTest()
         {
-            ChromeOptions options = new();
+            string chromeBinaryLocation = Environment.GetEnvironmentVariable("CHROMIUM_BIN");
+            ChromeOptions options = new()
+            {
+                BinaryLocation = chromeBinaryLocation
+            };
             options.AddArguments("--headless", "--no-sandbox");
             m_webDriver = new ChromeDriver(options);
         }
