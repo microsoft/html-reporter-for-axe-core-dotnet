@@ -1,16 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Authors>Isaac Walker</Authors>
+    <Authors>AxeCoreHTMLReporter</Authors>
     <Description>Playwright integration for AxeCore Dotnet HTML Reporter</Description>
     <TargetFrameworks>netstandard2.1</TargetFrameworks>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/microsoft/html-reporter-for-axe-core-dotnet</PackageProjectUrl>
-	<PackageIcon>PackageIcon.png</PackageIcon>
+	  <PackageIcon>PackageIcon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/microsoft/html-reporter-for-axe-core-dotnet</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-	<GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+	  <GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+	  <Title>AxeCore HTML Reporter for Playwright</Title>
+    <Version>1.0.0-alpha</Version>
   </PropertyGroup>
 
 	<ItemGroup>

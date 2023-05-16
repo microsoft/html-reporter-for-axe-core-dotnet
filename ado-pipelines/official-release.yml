@@ -12,6 +12,10 @@ jobs:
     inputs:
       version: 6.x
 
+  - task: NuGetAuthenticate@0
+    inputs:
+    nuGetServiceConnections: AxeCore HTML Nuget
+
   - task: DotNetCoreCLI@2
     inputs:
       command: 'restore'
@@ -19,6 +23,11 @@ jobs:
   - task: DotNetCoreCLI@2
     inputs:
       command: 'build'
+      arguments: '--configuration Release'
+
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: 'pack'
       arguments: '--configuration Release'
 
   - task: DotNetCoreCLI@2
