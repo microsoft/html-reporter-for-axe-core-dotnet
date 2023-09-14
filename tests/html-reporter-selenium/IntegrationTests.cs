@@ -22,7 +22,7 @@ namespace AxeCore.HTMLReporter.Selenium.Tests
         public IntegrationTests()
         {
             DriverManager driverManager = new();
-            driverManager.SetUpDriver(new ChromeConfig());
+            driverManager.SetUpDriver(new ChromeConfig(), "116.0");
         }
 
         [SetUp]
@@ -31,7 +31,8 @@ namespace AxeCore.HTMLReporter.Selenium.Tests
             string chromeBinaryLocation = Environment.GetEnvironmentVariable("CHROMIUM_BIN");
             ChromeOptions options = new()
             {
-                BinaryLocation = chromeBinaryLocation
+                BinaryLocation = chromeBinaryLocation,
+                BrowserVersion = "116"
             };
             options.AddArguments("--headless", "--no-sandbox");
             m_webDriver = new ChromeDriver(options);
