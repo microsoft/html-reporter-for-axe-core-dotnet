@@ -14,7 +14,7 @@ jobs:
 
   - task: NuGetAuthenticate@0
     inputs:
-    nuGetServiceConnections: AxeCore HTML Nuget
+      nuGetServiceConnections: 'AxeCore HTML Nuget'
 
   - task: DotNetCoreCLI@2
     inputs:
