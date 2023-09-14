@@ -12,7 +12,7 @@ jobs:
     inputs:
       version: 6.x
 
-  - task: NuGetAuthenticate@0
+  - task: NuGetAuthenticate@1
     inputs:
       nuGetServiceConnections: 'AxeCore HTML Nuget'
 
