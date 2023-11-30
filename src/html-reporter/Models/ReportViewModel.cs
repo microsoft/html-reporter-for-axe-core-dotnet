@@ -3,7 +3,7 @@
 
 using System;
 
-namespace AxeCore.HTMLReporter.Models
+namespace Microsoft.HtmlReporterForAxeCore.Models
 {
     /// <summary>
     /// View Model for Report markup

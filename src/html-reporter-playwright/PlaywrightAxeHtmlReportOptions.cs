@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-namespace AxeCore.HTMLReporter.Playwright
+namespace Microsoft.HtmlReporterForAxeCore.Playwright
 {
     /// <inheritdoc />
     public sealed class PlaywrightAxeHTMLReportOptions : AxeHTMLReportOptions

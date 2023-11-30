@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-namespace AxeCore.HTMLReporter.Templates
+namespace Microsoft.HtmlReporterForAxeCore.Templates
 {
     internal static class HtmlTemplates
     {

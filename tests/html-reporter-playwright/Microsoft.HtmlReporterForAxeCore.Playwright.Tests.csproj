@@ -28,6 +28,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\html-reporter-playwright\AxeCore.HTMLReporter.Playwright.csproj" />
+    <ProjectReference Include="..\..\src\html-reporter-playwright\Microsoft.HtmlReporterForAxeCore.Playwright.csproj" />
   </ItemGroup>
 </Project>

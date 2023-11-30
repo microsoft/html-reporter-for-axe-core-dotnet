@@ -5,7 +5,7 @@ using Deque.AxeCore.Commons;
 using Newtonsoft.Json.Linq;
 using System;
 
-namespace AxeCore.HTMLReporter.Tests
+namespace Microsoft.HtmlReporterForAxeCore.Tests
 {
     internal static class TestData
     {

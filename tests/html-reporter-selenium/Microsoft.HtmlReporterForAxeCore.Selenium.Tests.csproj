@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\html-reporter-selenium\AxeCore.HTMLReporter.Selenium.csproj" />
+    <ProjectReference Include="..\..\src\html-reporter-selenium\Microsoft.HtmlReporterForAxeCore.Selenium.csproj" />
   </ItemGroup>
 
   <ItemGroup>

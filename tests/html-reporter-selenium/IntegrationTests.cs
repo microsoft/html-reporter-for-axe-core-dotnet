@@ -11,7 +11,7 @@ using System.IO;
 using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
 
-namespace AxeCore.HTMLReporter.Selenium.Tests
+namespace Microsoft.HtmlReporterForAxeCore.Selenium.Tests
 {
     [TestFixture]
     [Category("Integration")]

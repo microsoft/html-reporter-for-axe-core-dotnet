@@ -1,4 +1,4 @@
-# AxeCore.HTMLReporter
+# Microsoft.HtmlReporterForAxeCore
 
 HTML report generation for AxeResults from [axe-core-nuget](https://github.com/dequelabs/axe-core-nuget).
 
@@ -7,14 +7,14 @@ HTML report generation for AxeResults from [axe-core-nuget](https://github.com/d
 Install via NuGet:
 
 ```powershell
-PM> Install-Package AxeCore.HTMLReporter
+PM> Install-Package Microsoft.HtmlReporterForAxeCore
 # or, use the Visual Studio "Manage NuGet Packages" UI
 ```
 
 Import the namespace:
 
 ```csharp
-using AxeCore.HTMLReporter;
+using Microsoft.HtmlReporterForAxeCore;
 ```
 
 Get the HTML Reporter instance, create the report on the axeResults and write it to a file.

@@ -1,17 +1,17 @@
 ﻿// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-using AxeCore.HTMLReporter.Content;
-using AxeCore.HTMLReporter.Image;
-using AxeCore.HTMLReporter.Models;
-using AxeCore.HTMLReporter.Templates;
+using Microsoft.HtmlReporterForAxeCore.Content;
+using Microsoft.HtmlReporterForAxeCore.Image;
+using Microsoft.HtmlReporterForAxeCore.Models;
+using Microsoft.HtmlReporterForAxeCore.Templates;
 using Deque.AxeCore.Commons;
 using HandlebarsDotNet;
 using System;
 using System.Globalization;
 using System.Linq;
 
-namespace AxeCore.HTMLReporter
+namespace Microsoft.HtmlReporterForAxeCore
 {
     /// <inheritdoc />
     public sealed class AxeHTMLReporter : IAxeHTMLReporter

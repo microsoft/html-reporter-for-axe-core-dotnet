@@ -6,7 +6,7 @@ using NUnit.Framework;
 using System.Globalization;
 using System.Linq;
 
-namespace AxeCore.HTMLReporter.Tests
+namespace Microsoft.HtmlReporterForAxeCore.Tests
 {
     [TestFixture]
     public class RuleGroupUtilsTests

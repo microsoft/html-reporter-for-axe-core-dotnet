@@ -1,4 +1,4 @@
-# AxeCore.HTMLReporter.Selenium
+# Microsoft.HtmlReporterForAxeCore.Selenium
 
 HTML reporter integration for [Deque.AxeCore.Selenium](https://github.com/dequelabs/axe-core-nuget/blob/develop/packages/selenium).
 
@@ -7,14 +7,14 @@ HTML reporter integration for [Deque.AxeCore.Selenium](https://github.com/dequel
 Install via NuGet:
 
 ```powershell
-PM> Install-Package AxeCore.HTMLReporter.Selenium
+PM> Install-Package Microsoft.HtmlReporterForAxeCore.Selenium
 # or, use the Visual Studio "Manage NuGet Packages" UI
 ```
 
 Import the namespace:
 
 ```csharp
-using AxeCore.HTMLReporter.Selenium;
+using Microsoft.HtmlReporterForAxeCore.Selenium;
 ```
 
 This adds a `WithHTMLReport()` extension method to the `AxeBuilder`.

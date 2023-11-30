@@ -4,7 +4,7 @@
 using Deque.AxeCore.Commons;
 using Newtonsoft.Json.Linq;
 
-namespace AxeCore.HTMLReporter.DevServer
+namespace Microsoft.HtmlReporterForAxeCore.DevServer
 {
     public sealed class MockDataFactory
     {

@@ -4,7 +4,7 @@
 using NUnit.Framework;
 using System.IO;
 
-namespace AxeCore.HTMLReporter.Tests
+namespace Microsoft.HtmlReporterForAxeCore.Tests
 {
     [TestFixture]
     public class AxeHTMLReportTests

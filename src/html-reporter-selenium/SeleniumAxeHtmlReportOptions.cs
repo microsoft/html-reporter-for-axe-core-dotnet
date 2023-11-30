@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-namespace AxeCore.HTMLReporter.Selenium
+namespace Microsoft.HtmlReporterForAxeCore.Selenium
 {
     /// <inheritdoc />
     public sealed class SeleniumAxeHtmlReportOptions : AxeHTMLReportOptions

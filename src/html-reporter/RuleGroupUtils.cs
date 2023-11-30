@@ -1,15 +1,15 @@
 ﻿// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-using AxeCore.HTMLReporter.Content;
-using AxeCore.HTMLReporter.Models;
+using Microsoft.HtmlReporterForAxeCore.Content;
+using Microsoft.HtmlReporterForAxeCore.Models;
 using Deque.AxeCore.Commons;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 
-namespace AxeCore.HTMLReporter
+namespace Microsoft.HtmlReporterForAxeCore
 {
     /// <summary>
     /// Utilities for Rule Groups

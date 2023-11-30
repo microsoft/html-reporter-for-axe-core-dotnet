@@ -10,7 +10,7 @@ using Deque.AxeCore.Commons;
 using System.Collections.Generic;
 using Microsoft.Playwright;
 
-namespace AxeCore.HTMLReporter.Playwright.Tests
+namespace Microsoft.HtmlReporterForAxeCore.Playwright.Tests
 {
     [TestFixture]
     [Category("Integration")]

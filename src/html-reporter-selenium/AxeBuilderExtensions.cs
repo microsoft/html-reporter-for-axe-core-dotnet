@@ -3,7 +3,7 @@
 
 using Deque.AxeCore.Selenium;
 
-namespace AxeCore.HTMLReporter.Selenium
+namespace Microsoft.HtmlReporterForAxeCore.Selenium
 {
     /// <summary>
     /// Extensions which add HTML Report to AxeBuilder

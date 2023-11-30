@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-namespace AxeCore.HTMLReporter.DevServer
+namespace Microsoft.HtmlReporterForAxeCore.DevServer
 {
     public enum IntegrationType
     {

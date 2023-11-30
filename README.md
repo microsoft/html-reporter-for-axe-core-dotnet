@@ -6,9 +6,9 @@ Provides integration libraries for [Deque.AxeCore.Playwright](https://github.com
 
 The packages in this repo are listed below:
 
-- [AxeCore.HTMLReporter](./src/html-reporter/README.md)
-- [AxeCore.HTMLReporter.Playwright](./src/html-reporter-playwright/README.md)
-- [AxeCore.HTMLReporter.Selenium](./src/html-reporter-selenium/README.MD)
+- [Microsoft.HtmlReporterForAxeCore.HTMLReporter](./src/html-reporter/README.md)
+- [Microsoft.HtmlReporterForAxeCore.Playwright](./src/html-reporter-playwright/README.md)
+- [Microsoft.HtmlReporterForAxeCore.Selenium](./src/html-reporter-selenium/README.MD)
 
 
 ## Contributing
