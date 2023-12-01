@@ -6,7 +6,7 @@ using Deque.AxeCore.Playwright;
 using Microsoft.Playwright;
 using System.Threading.Tasks;
 
-namespace AxeCore.HTMLReporter.Playwright
+namespace Microsoft.HtmlReporterForAxeCore.Playwright
 {
     /// <summary>
     /// Page Extensions which add HTML Report Options

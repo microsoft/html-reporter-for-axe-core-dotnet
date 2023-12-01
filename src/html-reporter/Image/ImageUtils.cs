@@ -4,7 +4,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace AxeCore.HTMLReporter.Image
+namespace Microsoft.HtmlReporterForAxeCore.Image
 {
     /// <summary>
     /// Common Utilities for Images in the report

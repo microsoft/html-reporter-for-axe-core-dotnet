@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AxeCore.HTMLReporter", "src\html-reporter\AxeCore.HTMLReporter.csproj", "{1A1AF7F1-B397-44D0-8698-C05B5F5186F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.HtmlReporterForAxeCore", "src\html-reporter\Microsoft.HtmlReporterForAxeCore.csproj", "{1A1AF7F1-B397-44D0-8698-C05B5F5186F2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{50AB32D1-D376-4887-9EEB-7BE2328046DA}"
 	ProjectSection(SolutionItems) = preProject
@@ -16,17 +16,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 		SUPPORT.md = SUPPORT.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AxeCore.HTMLReporter.Tests", "tests\html-reporter\AxeCore.HTMLReporter.Tests.csproj", "{6A5EB42E-630F-4132-8679-11728C7A092F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.HtmlReporterForAxeCore.Tests", "tests\html-reporter\Microsoft.HtmlReporterForAxeCore.Tests.csproj", "{6A5EB42E-630F-4132-8679-11728C7A092F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AxeCore.HTMLReporter.DevServer", "src\dev-server\AxeCore.HTMLReporter.DevServer.csproj", "{CC2522E5-8DA8-4017-BF55-A520F1E2C1A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.HtmlReporterForAxeCore.DevServer", "src\dev-server\Microsoft.HtmlReporterForAxeCore.DevServer.csproj", "{CC2522E5-8DA8-4017-BF55-A520F1E2C1A7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AxeCore.HTMLReporter.Playwright", "src\html-reporter-playwright\AxeCore.HTMLReporter.Playwright.csproj", "{337DD0CB-3FF6-48EB-992F-B6EFCF612DD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.HtmlReporterForAxeCore.Playwright", "src\html-reporter-playwright\Microsoft.HtmlReporterForAxeCore.Playwright.csproj", "{337DD0CB-3FF6-48EB-992F-B6EFCF612DD2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AxeCore.HTMLReporter.Playwright.Tests", "tests\html-reporter-playwright\AxeCore.HTMLReporter.Playwright.Tests.csproj", "{4A50CAB8-E505-444D-9A87-76796F44B1FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.HtmlReporterForAxeCore.Playwright.Tests", "tests\html-reporter-playwright\Microsoft.HtmlReporterForAxeCore.Playwright.Tests.csproj", "{4A50CAB8-E505-444D-9A87-76796F44B1FC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AxeCore.HTMLReporter.Selenium", "src\html-reporter-selenium\AxeCore.HTMLReporter.Selenium.csproj", "{0388ECAE-6916-467C-9BFE-17F21C04BB49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.HtmlReporterForAxeCore.Selenium", "src\html-reporter-selenium\Microsoft.HtmlReporterForAxeCore.Selenium.csproj", "{0388ECAE-6916-467C-9BFE-17F21C04BB49}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AxeCore.HTMLReporter.Selenium.Tests", "tests\html-reporter-selenium\AxeCore.HTMLReporter.Selenium.Tests.csproj", "{06E2B8CA-2FDA-45BC-A3F9-DF3CF069C2A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.HtmlReporterForAxeCore.Selenium.Tests", "tests\html-reporter-selenium\Microsoft.HtmlReporterForAxeCore.Selenium.Tests.csproj", "{06E2B8CA-2FDA-45BC-A3F9-DF3CF069C2A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

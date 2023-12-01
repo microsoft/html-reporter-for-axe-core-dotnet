@@ -19,5 +19,5 @@ using System.Runtime.InteropServices;
 // The following GUID is for the ID of the typelib if this project is exposed to COM.
 
 [assembly: Guid("ddcf3e58-d033-48de-b70c-ddbbdef81ad9")]
-[assembly: InternalsVisibleTo("AxeCore.HTMLReporter.Tests")]
+[assembly: InternalsVisibleTo("Microsoft.HtmlReporterForAxeCore.Tests")]
 

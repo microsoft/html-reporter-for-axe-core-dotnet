@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <Authors>AxeCoreHTMLReporter</Authors>
-    <Description>Selenium integration for AxeCore Dotnet HTML Reporter</Description>
-    <TargetFrameworks>net471;netstandard2.0</TargetFrameworks>
+    <Description>Playwright integration for AxeCore Dotnet HTML Reporter</Description>
+    <TargetFrameworks>netstandard2.1</TargetFrameworks>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/microsoft/html-reporter-for-axe-core-dotnet</PackageProjectUrl>
 	  <PackageIcon>PackageIcon.png</PackageIcon>
@@ -11,22 +11,22 @@
     <RepositoryUrl>https://github.com/microsoft/html-reporter-for-axe-core-dotnet</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
 	  <GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
-	  <Title>AxeCore HTML Reporter for Selenium</Title>
+	  <Title>AxeCore HTML Reporter for Playwright</Title>
     <Version>1.0.0-alpha</Version>
   </PropertyGroup>
 
 	<ItemGroup>
-		<None Include="..\..\PackageIcon.png" Pack="true" PackagePath="\" />
-		<None Include="README.md" Pack="true" PackagePath="\" />
+		<None Include="..\..\PackageIcon.png" Pack="true" PackagePath="\"/>
+		<None Include="README.md" Pack="true" PackagePath="\"/>
 	</ItemGroup>
-
-	<ItemGroup>
-		<PackageReference Include="Selenium.WebDriver" />
-		<PackageReference Include="Deque.AxeCore.Commons" />
-		<PackageReference Include="Deque.AxeCore.Selenium" />
-	</ItemGroup>
+	
+  <ItemGroup>
+	<PackageReference Include="Microsoft.Playwright" />
+	<PackageReference Include="Deque.AxeCore.Commons" />
+	<PackageReference Include="Deque.AxeCore.Playwright" />
+  </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\html-reporter\AxeCore.HTMLReporter.csproj" />
+    <ProjectReference Include="..\html-reporter\Microsoft.HtmlReporterForAxeCore.csproj" />
   </ItemGroup>
 </Project>

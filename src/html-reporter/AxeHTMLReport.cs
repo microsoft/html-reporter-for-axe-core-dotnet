@@ -3,7 +3,7 @@
 
 using System.IO;
 
-namespace AxeCore.HTMLReporter
+namespace Microsoft.HtmlReporterForAxeCore
 {
     /// <summary>
     /// Axe HTML Report

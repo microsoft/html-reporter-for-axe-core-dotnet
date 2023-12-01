@@ -1,10 +1,10 @@
 ﻿// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-using AxeCore.HTMLReporter.Image;
+using Microsoft.HtmlReporterForAxeCore.Image;
 using NUnit.Framework;
 
-namespace AxeCore.HTMLReporter.Tests
+namespace Microsoft.HtmlReporterForAxeCore.Tests
 {
     [TestFixture]
     public sealed class AxeHTMLReporterTests

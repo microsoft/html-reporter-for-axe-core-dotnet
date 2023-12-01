@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-namespace AxeCore.HTMLReporter.Image
+namespace Microsoft.HtmlReporterForAxeCore.Image
 {
     /// <summary>
     /// Supported Image Formats

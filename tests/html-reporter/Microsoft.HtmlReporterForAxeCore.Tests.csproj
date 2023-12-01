@@ -12,6 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\html-reporter\AxeCore.HTMLReporter.csproj" />
+    <ProjectReference Include="..\..\src\html-reporter\Microsoft.HtmlReporterForAxeCore.csproj" />
   </ItemGroup>
 </Project>

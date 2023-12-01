@@ -7,9 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\html-reporter-playwright\AxeCore.HTMLReporter.Playwright.csproj" />
-    <ProjectReference Include="..\html-reporter-selenium\AxeCore.HTMLReporter.Selenium.csproj" />
-    <ProjectReference Include="..\html-reporter\AxeCore.HTMLReporter.csproj" />
+    <ProjectReference Include="..\html-reporter-playwright\Microsoft.HtmlReporterForAxeCore.Playwright.csproj" />
+    <ProjectReference Include="..\html-reporter-selenium\Microsoft.HtmlReporterForAxeCore.Selenium.csproj" />
+    <ProjectReference Include="..\html-reporter\Microsoft.HtmlReporterForAxeCore.csproj" />
 	<PackageReference Include="Microsoft.Playwright" />
 	<PackageReference Include="Deque.AxeCore.Commons" />
 	<PackageReference Include="Deque.AxeCore.Playwright" />

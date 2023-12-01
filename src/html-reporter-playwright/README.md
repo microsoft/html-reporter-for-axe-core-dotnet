@@ -1,4 +1,4 @@
-# AxeCore.HTMLReporter.Playwright
+# Microsoft.HtmlReporterForAxeCore.Playwright
 
 HTML report generation integration for [Deque.AxeCore.Playwright](https://github.com/dequelabs/axe-core-nuget/blob/develop/packages/playwright).
 
@@ -7,14 +7,14 @@ HTML report generation integration for [Deque.AxeCore.Playwright](https://github
 Install via NuGet:
 
 ```powershell
-PM> Install-Package AxeCore.HTMLReporter.Playwight
+PM> Install-Package Microsoft.HtmlReporterForAxeCore.Playwight
 # or, use the Visual Studio "Manage NuGet Packages" UI
 ```
 
 Import the namespace:
 
 ```csharp
-using AxeCore.HTMLReporter.Playwight;
+using Microsoft.HtmlReporterForAxeCore.Playwight;
 ```
 
 This adds a `RunAxe()` overload which includes HTML report options.
@@ -83,3 +83,7 @@ PlaywrightAxeHTMLReportOptions htmlReportOptions = new()
     ReportFilename = "./reports/test1-report.html",
 };
 ```
+
+# Trademarks
+
+AXE-CORE® is a trademark of [Deque Systems, Inc](https://www.deque.com/). in the US and other countries.

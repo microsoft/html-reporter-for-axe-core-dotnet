@@ -1,13 +1,13 @@
 ﻿// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-using AxeCore.HTMLReporter.Playwright;
+using Microsoft.HtmlReporterForAxeCore.Playwright;
 using Deque.AxeCore.Commons;
 using Deque.AxeCore.Playwright;
 using Microsoft.AspNetCore.Mvc;
 using PlaywrightInstance = Microsoft.Playwright.Playwright;
 
-namespace AxeCore.HTMLReporter.DevServer.Controllers
+namespace Microsoft.HtmlReporterForAxeCore.DevServer.Controllers
 {
     public class HomeController : Controller
     {

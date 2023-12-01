@@ -6,9 +6,9 @@ Provides integration libraries for [Deque.AxeCore.Playwright](https://github.com
 
 The packages in this repo are listed below:
 
-- [AxeCore.HTMLReporter](./src/html-reporter/README.md)
-- [AxeCore.HTMLReporter.Playwright](./src/html-reporter-playwright/README.md)
-- [AxeCore.HTMLReporter.Selenium](./src/html-reporter-selenium/README.MD)
+- [Microsoft.HtmlReporterForAxeCore.HTMLReporter](./src/html-reporter/README.md)
+- [Microsoft.HtmlReporterForAxeCore.Playwright](./src/html-reporter-playwright/README.md)
+- [Microsoft.HtmlReporterForAxeCore.Selenium](./src/html-reporter-selenium/README.MD)
 
 
 ## Contributing
@@ -32,3 +32,7 @@ trademarks or logos is subject to and must follow
 [Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
 Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
 Any use of third-party trademarks or logos are subject to those third-party's policies.
+
+### Axe-core®
+
+AXE-CORE® is a trademark of [Deque Systems, Inc](https://www.deque.com/). in the US and other countries.

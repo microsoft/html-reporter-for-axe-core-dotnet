@@ -3,7 +3,7 @@
 
 using System;
 
-namespace AxeCore.HTMLReporter
+namespace Microsoft.HtmlReporterForAxeCore
 {
     /// <summary>
     /// Specifies which rule types to include in the report.

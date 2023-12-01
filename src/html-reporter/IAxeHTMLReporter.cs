@@ -1,10 +1,10 @@
 ﻿// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-using AxeCore.HTMLReporter.Image;
+using Microsoft.HtmlReporterForAxeCore.Image;
 using Deque.AxeCore.Commons;
 
-namespace AxeCore.HTMLReporter
+namespace Microsoft.HtmlReporterForAxeCore
 {
     /// <summary>
     /// Reporter for generting HTML Report of an axe-core run result.
