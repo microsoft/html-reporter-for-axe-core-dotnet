@@ -101,3 +101,7 @@ string reportContent = report.ToString();
 ```
 
 Returns the HTML report content as a string.
+
+# Trademarks
+
+AXE-CORE® is a trademark of [Deque Systems, Inc](https://www.deque.com/). in the US and other countries.

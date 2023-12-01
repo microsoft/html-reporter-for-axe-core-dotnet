@@ -61,3 +61,7 @@ SeleniumAxeHtmlReportOptions htmlReportOptions = new()
     ReportFilename = "./reports/test1-report.html",
 };
 ```
+
+# Trademarks
+
+AXE-CORE® is a trademark of [Deque Systems, Inc](https://www.deque.com/). in the US and other countries.
